@@ -109,25 +109,40 @@ Smart_Airline_Reservation_System/
 # 📸 Screenshots
 
 ## Home Page
-(Add Screenshot Here)
+<img width="1901" height="870" alt="image" src="https://github.com/user-attachments/assets/e63c3b54-6916-4eb0-a6cf-bd71e25f1b96" />
+
+<img width="1916" height="874" alt="image" src="https://github.com/user-attachments/assets/f8761e6d-f688-4277-9472-6ff183d141cc" />
+
+<img width="1918" height="867" alt="image" src="https://github.com/user-attachments/assets/dc625a9e-aebc-442b-9e2f-ac601deea944" />
+
 
 ## Flight Search
-(Add Screenshot Here)
+<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/7f7e5a15-f99e-4429-9382-84638f65557c" />
+
 
 ## Booking System
-(Add Screenshot Here)
+<img width="1919" height="862" alt="image" src="https://github.com/user-attachments/assets/993fc340-5571-49d4-b40d-50537f018108" />
+
+<img width="967" height="844" alt="image" src="https://github.com/user-attachments/assets/0176a41c-f71e-4cce-8c4e-c5f8c5622ce5" />
+
+<img width="656" height="864" alt="image" src="https://github.com/user-attachments/assets/355b7e94-02bb-400e-be52-49fc43dc73c6" />
 
 ## Payment Gateway
-(Add Screenshot Here)
+<img width="534" height="843" alt="image" src="https://github.com/user-attachments/assets/a075340d-f008-426f-83f3-eb4d1bf86683" />
+
 
 ## Ticket Page
-(Add Screenshot Here)
+<img width="839" height="804" alt="image" src="https://github.com/user-attachments/assets/86ec84d8-77d7-4b0a-bd16-164104747814" />
+
 
 ## Admin Dashboard
-(Add Screenshot Here)
+<img width="861" height="709" alt="image" src="https://github.com/user-attachments/assets/342cc58d-42a1-47e5-bebd-06b4d2834aa9" />
+
+<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/bca0e14b-b938-4f37-a51c-f39d256d643b" />
 
 ## Smart Flight Insights
-(Add Screenshot Here)
+<img width="1916" height="856" alt="image" src="https://github.com/user-attachments/assets/ca3a35d8-6db1-421f-9625-3f5b2d3f53f2" />
+
 
 ---
 
