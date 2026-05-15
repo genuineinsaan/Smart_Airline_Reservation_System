@@ -1,0 +1,251 @@
+record_id,airline_name,source,destination,available_day,departure_time,duration,stops,weather_status,delay_prediction
+1,Qatar Airways,Ahmedabad,Chennai,Sunday,11:15,6h 45m,0,Storm,Moderate Delay Chance
+2,Singapore Airlines,Ahmedabad,Delhi,Friday,15:15,2h 45m,2,Cloudy,Moderate Delay Chance
+3,Qatar Airways,Hyderabad,Chennai,Tuesday,18:45,6h 0m,2,Cloudy,Moderate Delay Chance
+4,Akasa Air,Ahmedabad,Chennai,Sunday,20:30,1h 15m,2,Clear,Moderate Delay Chance
+5,IndiGo,Pune,Kolkata,Monday,10:15,2h 0m,1,Cloudy,Low Delay Chance
+6,SpiceJet,Chennai,Bangalore,Tuesday,14:30,2h 30m,1,Rainy,Moderate Delay Chance
+7,Singapore Airlines,Chennai,Kolkata,Sunday,06:15,4h 45m,2,Rainy,High Delay Chance
+8,Emirates,Pune,Mumbai,Tuesday,22:30,3h 0m,0,Rainy,Moderate Delay Chance
+9,IndiGo,Mumbai,Pune,Friday,17:30,1h 30m,2,Cloudy,Moderate Delay Chance
+10,Akasa Air,Ahmedabad,Hyderabad,Wednesday,09:15,6h 45m,0,Storm,Moderate Delay Chance
+11,IndiGo,Delhi,Kolkata,Wednesday,19:45,6h 15m,0,Storm,Moderate Delay Chance
+12,Air India,Chennai,Hyderabad,Sunday,10:00,1h 0m,1,Storm,High Delay Chance
+13,IndiGo,Hyderabad,Mumbai,Friday,07:15,4h 45m,0,Rainy,Moderate Delay Chance
+14,Qatar Airways,Ahmedabad,Mumbai,Sunday,12:45,5h 15m,0,Cloudy,Low Delay Chance
+15,Singapore Airlines,Ahmedabad,Bangalore,Sunday,12:00,5h 15m,0,Clear,Low Delay Chance
+16,Qatar Airways,Delhi,Pune,Wednesday,21:45,4h 45m,1,Rainy,Moderate Delay Chance
+17,Vistara,Chennai,Mumbai,Monday,22:45,4h 45m,2,Clear,Moderate Delay Chance
+18,Akasa Air,Chennai,Pune,Wednesday,20:00,5h 30m,0,Rainy,Moderate Delay Chance
+19,Qatar Airways,Ahmedabad,Mumbai,Monday,23:15,4h 30m,1,Cloudy,Moderate Delay Chance
+20,SpiceJet,Chennai,Delhi,Wednesday,13:15,2h 30m,0,Cloudy,Low Delay Chance
+21,Singapore Airlines,Delhi,Pune,Monday,15:30,3h 15m,0,Cloudy,Low Delay Chance
+22,Qatar Airways,Delhi,Mumbai,Monday,14:45,3h 15m,2,Clear,Low Delay Chance
+23,Qatar Airways,Delhi,Pune,Friday,19:30,6h 15m,1,Rainy,Moderate Delay Chance
+24,Qatar Airways,Hyderabad,Mumbai,Saturday,11:30,6h 15m,1,Rainy,Moderate Delay Chance
+25,Singapore Airlines,Chennai,Kolkata,Tuesday,05:45,6h 15m,0,Clear,Low Delay Chance
+26,Emirates,Hyderabad,Pune,Tuesday,07:15,3h 30m,0,Rainy,Low Delay Chance
+27,Akasa Air,Kolkata,Ahmedabad,Thursday,23:45,3h 45m,1,Rainy,Moderate Delay Chance
+28,SpiceJet,Mumbai,Pune,Monday,16:15,6h 15m,2,Cloudy,Moderate Delay Chance
+29,IndiGo,Chennai,Bangalore,Friday,13:45,2h 0m,0,Clear,Low Delay Chance
+30,Singapore Airlines,Mumbai,Ahmedabad,Monday,15:45,3h 30m,0,Rainy,Low Delay Chance
+31,IndiGo,Hyderabad,Pune,Saturday,12:00,2h 30m,2,Storm,High Delay Chance
+32,SpiceJet,Hyderabad,Ahmedabad,Tuesday,11:30,6h 45m,0,Cloudy,Low Delay Chance
+33,IndiGo,Mumbai,Kolkata,Friday,12:45,4h 30m,2,Rainy,High Delay Chance
+34,Akasa Air,Ahmedabad,Kolkata,Tuesday,05:30,3h 15m,1,Storm,Moderate Delay Chance
+35,IndiGo,Ahmedabad,Delhi,Friday,23:45,4h 45m,0,Cloudy,Moderate Delay Chance
+36,Vistara,Pune,Ahmedabad,Wednesday,09:30,1h 0m,1,Storm,Moderate Delay Chance
+37,Air India,Hyderabad,Mumbai,Tuesday,12:00,1h 30m,2,Clear,Low Delay Chance
+38,Air India,Mumbai,Hyderabad,Wednesday,17:30,4h 15m,2,Clear,Low Delay Chance
+39,Qatar Airways,Bangalore,Delhi,Monday,22:45,2h 45m,0,Clear,Low Delay Chance
+40,Vistara,Delhi,Hyderabad,Wednesday,18:15,1h 30m,1,Cloudy,Low Delay Chance
+41,Emirates,Bangalore,Mumbai,Wednesday,05:15,3h 0m,0,Rainy,Low Delay Chance
+42,Qatar Airways,Chennai,Delhi,Wednesday,09:00,4h 45m,1,Clear,Low Delay Chance
+43,Singapore Airlines,Bangalore,Pune,Tuesday,06:30,6h 0m,0,Clear,Low Delay Chance
+44,Qatar Airways,Kolkata,Chennai,Thursday,14:30,5h 45m,1,Clear,Low Delay Chance
+45,Singapore Airlines,Delhi,Bangalore,Monday,09:30,2h 30m,1,Storm,Moderate Delay Chance
+46,Qatar Airways,Hyderabad,Bangalore,Wednesday,10:45,1h 30m,2,Cloudy,Moderate Delay Chance
+47,Qatar Airways,Mumbai,Pune,Friday,07:30,5h 45m,0,Clear,Low Delay Chance
+48,IndiGo,Chennai,Kolkata,Sunday,17:15,6h 45m,0,Cloudy,Low Delay Chance
+49,Vistara,Bangalore,Mumbai,Friday,10:45,4h 15m,2,Storm,High Delay Chance
+50,Singapore Airlines,Pune,Mumbai,Sunday,06:30,4h 45m,0,Storm,Moderate Delay Chance
+51,Qatar Airways,Bangalore,Delhi,Saturday,17:00,6h 0m,2,Storm,High Delay Chance
+52,Vistara,Delhi,Bangalore,Saturday,21:45,2h 45m,2,Clear,Moderate Delay Chance
+53,Singapore Airlines,Mumbai,Ahmedabad,Thursday,06:15,4h 30m,2,Rainy,Moderate Delay Chance
+54,Emirates,Chennai,Kolkata,Friday,11:30,2h 15m,1,Cloudy,Moderate Delay Chance
+55,Qatar Airways,Pune,Mumbai,Saturday,07:15,5h 45m,0,Storm,Moderate Delay Chance
+56,Emirates,Chennai,Ahmedabad,Thursday,08:00,3h 30m,1,Cloudy,Low Delay Chance
+57,SpiceJet,Kolkata,Pune,Sunday,14:15,5h 30m,0,Rainy,Moderate Delay Chance
+58,Vistara,Delhi,Kolkata,Friday,18:00,3h 45m,0,Storm,Moderate Delay Chance
+59,Singapore Airlines,Delhi,Mumbai,Sunday,17:30,5h 15m,2,Storm,High Delay Chance
+60,Akasa Air,Hyderabad,Ahmedabad,Monday,14:30,6h 15m,1,Rainy,Moderate Delay Chance
+61,SpiceJet,Delhi,Mumbai,Monday,07:00,5h 0m,2,Storm,High Delay Chance
+62,Akasa Air,Chennai,Pune,Saturday,13:15,4h 0m,2,Clear,Moderate Delay Chance
+63,SpiceJet,Chennai,Pune,Sunday,12:45,6h 15m,2,Storm,High Delay Chance
+64,Vistara,Delhi,Ahmedabad,Wednesday,08:15,2h 45m,2,Cloudy,Moderate Delay Chance
+65,SpiceJet,Bangalore,Delhi,Saturday,06:00,3h 0m,2,Storm,High Delay Chance
+66,Qatar Airways,Pune,Mumbai,Friday,12:45,5h 30m,0,Storm,Moderate Delay Chance
+67,Emirates,Hyderabad,Delhi,Monday,09:00,5h 30m,1,Clear,Low Delay Chance
+68,Akasa Air,Delhi,Ahmedabad,Thursday,17:00,4h 0m,0,Cloudy,Low Delay Chance
+69,IndiGo,Chennai,Delhi,Thursday,13:30,4h 45m,1,Rainy,Moderate Delay Chance
+70,Qatar Airways,Ahmedabad,Bangalore,Monday,18:45,6h 30m,1,Storm,Moderate Delay Chance
+71,Singapore Airlines,Kolkata,Chennai,Monday,22:30,2h 30m,0,Clear,Low Delay Chance
+72,Emirates,Hyderabad,Pune,Friday,21:15,5h 30m,0,Storm,High Delay Chance
+73,Akasa Air,Delhi,Chennai,Saturday,11:30,5h 0m,0,Clear,Low Delay Chance
+74,SpiceJet,Kolkata,Ahmedabad,Tuesday,14:00,5h 45m,1,Storm,Moderate Delay Chance
+75,IndiGo,Kolkata,Ahmedabad,Sunday,13:30,6h 0m,1,Rainy,Moderate Delay Chance
+76,IndiGo,Hyderabad,Mumbai,Thursday,09:45,3h 15m,2,Rainy,Moderate Delay Chance
+77,Air India,Chennai,Pune,Monday,13:45,4h 15m,1,Rainy,Moderate Delay Chance
+78,Akasa Air,Bangalore,Kolkata,Tuesday,15:00,6h 30m,0,Cloudy,Low Delay Chance
+79,Air India,Bangalore,Chennai,Friday,08:15,1h 45m,2,Storm,High Delay Chance
+80,Qatar Airways,Pune,Mumbai,Sunday,22:15,4h 15m,1,Rainy,High Delay Chance
+81,Qatar Airways,Hyderabad,Chennai,Sunday,09:00,6h 0m,2,Rainy,High Delay Chance
+82,Qatar Airways,Hyderabad,Chennai,Monday,23:15,4h 0m,2,Rainy,High Delay Chance
+83,Akasa Air,Delhi,Bangalore,Tuesday,22:30,1h 45m,1,Cloudy,Moderate Delay Chance
+84,SpiceJet,Hyderabad,Kolkata,Wednesday,06:30,6h 0m,0,Rainy,Low Delay Chance
+85,Singapore Airlines,Pune,Bangalore,Sunday,22:15,4h 30m,0,Cloudy,Moderate Delay Chance
+86,Akasa Air,Ahmedabad,Delhi,Sunday,05:30,6h 30m,1,Storm,High Delay Chance
+87,Air India,Chennai,Ahmedabad,Thursday,08:15,3h 30m,0,Cloudy,Low Delay Chance
+88,Emirates,Chennai,Kolkata,Friday,07:45,6h 30m,2,Rainy,High Delay Chance
+89,SpiceJet,Kolkata,Chennai,Sunday,13:15,4h 15m,2,Storm,High Delay Chance
+90,Akasa Air,Ahmedabad,Mumbai,Monday,05:15,2h 45m,0,Storm,Moderate Delay Chance
+91,Emirates,Bangalore,Chennai,Saturday,09:15,3h 0m,0,Clear,Low Delay Chance
+92,Singapore Airlines,Delhi,Kolkata,Thursday,08:30,2h 45m,1,Cloudy,Low Delay Chance
+93,Akasa Air,Chennai,Ahmedabad,Tuesday,18:30,2h 45m,1,Rainy,Moderate Delay Chance
+94,Vistara,Ahmedabad,Kolkata,Saturday,08:30,6h 15m,0,Storm,Moderate Delay Chance
+95,Emirates,Mumbai,Bangalore,Wednesday,17:00,2h 0m,0,Clear,Low Delay Chance
+96,IndiGo,Pune,Kolkata,Thursday,23:30,5h 30m,2,Cloudy,Moderate Delay Chance
+97,Akasa Air,Kolkata,Hyderabad,Tuesday,13:15,1h 30m,1,Rainy,Moderate Delay Chance
+98,Emirates,Kolkata,Pune,Sunday,15:15,1h 30m,0,Rainy,Moderate Delay Chance
+99,Akasa Air,Hyderabad,Kolkata,Friday,21:45,5h 30m,2,Clear,Moderate Delay Chance
+100,Akasa Air,Bangalore,Hyderabad,Monday,19:45,3h 0m,2,Storm,High Delay Chance
+101,Singapore Airlines,Mumbai,Hyderabad,Monday,15:45,5h 45m,0,Rainy,Low Delay Chance
+102,Qatar Airways,Delhi,Bangalore,Friday,23:00,2h 15m,1,Clear,Moderate Delay Chance
+103,Qatar Airways,Mumbai,Bangalore,Wednesday,21:00,2h 30m,2,Cloudy,Moderate Delay Chance
+104,Akasa Air,Kolkata,Delhi,Saturday,17:45,4h 15m,2,Rainy,High Delay Chance
+105,Air India,Ahmedabad,Delhi,Friday,08:30,3h 45m,2,Storm,High Delay Chance
+106,Vistara,Kolkata,Ahmedabad,Wednesday,15:45,6h 30m,2,Rainy,Moderate Delay Chance
+107,SpiceJet,Bangalore,Mumbai,Saturday,05:15,1h 0m,2,Storm,High Delay Chance
+108,Air India,Delhi,Kolkata,Sunday,05:45,4h 30m,0,Cloudy,Low Delay Chance
+109,IndiGo,Mumbai,Bangalore,Thursday,12:30,3h 0m,0,Clear,Low Delay Chance
+110,IndiGo,Ahmedabad,Delhi,Friday,11:15,5h 30m,2,Clear,Moderate Delay Chance
+111,Singapore Airlines,Delhi,Chennai,Saturday,23:00,4h 45m,1,Clear,Moderate Delay Chance
+112,Emirates,Bangalore,Delhi,Friday,10:30,2h 0m,1,Storm,High Delay Chance
+113,Vistara,Mumbai,Delhi,Sunday,07:15,2h 0m,1,Clear,Low Delay Chance
+114,Singapore Airlines,Delhi,Ahmedabad,Saturday,10:30,4h 0m,1,Clear,Low Delay Chance
+115,Qatar Airways,Kolkata,Bangalore,Thursday,21:45,5h 45m,2,Clear,Moderate Delay Chance
+116,IndiGo,Pune,Delhi,Monday,12:15,2h 30m,0,Cloudy,Low Delay Chance
+117,Singapore Airlines,Pune,Bangalore,Sunday,05:30,2h 30m,1,Rainy,Moderate Delay Chance
+118,Air India,Kolkata,Chennai,Wednesday,16:45,4h 45m,2,Storm,High Delay Chance
+119,IndiGo,Delhi,Kolkata,Friday,15:15,2h 45m,1,Clear,Low Delay Chance
+120,Air India,Ahmedabad,Kolkata,Monday,11:15,4h 30m,2,Clear,Low Delay Chance
+121,Singapore Airlines,Delhi,Bangalore,Saturday,20:00,6h 0m,1,Cloudy,Moderate Delay Chance
+122,Air India,Hyderabad,Mumbai,Wednesday,09:15,2h 45m,0,Storm,Moderate Delay Chance
+123,Qatar Airways,Hyderabad,Chennai,Tuesday,08:30,6h 15m,1,Cloudy,Low Delay Chance
+124,Singapore Airlines,Pune,Mumbai,Wednesday,20:30,6h 0m,2,Rainy,High Delay Chance
+125,Air India,Chennai,Mumbai,Thursday,18:15,3h 45m,0,Cloudy,Low Delay Chance
+126,Emirates,Pune,Kolkata,Tuesday,11:15,3h 15m,1,Clear,Low Delay Chance
+127,Vistara,Mumbai,Chennai,Saturday,15:45,3h 15m,0,Storm,Moderate Delay Chance
+128,Akasa Air,Bangalore,Hyderabad,Wednesday,13:45,3h 15m,1,Clear,Low Delay Chance
+129,Akasa Air,Delhi,Bangalore,Friday,05:00,3h 45m,2,Rainy,High Delay Chance
+130,SpiceJet,Kolkata,Delhi,Wednesday,21:15,1h 0m,1,Storm,High Delay Chance
+131,Qatar Airways,Chennai,Pune,Sunday,22:45,6h 0m,0,Rainy,Moderate Delay Chance
+132,Vistara,Kolkata,Delhi,Sunday,06:45,3h 30m,2,Cloudy,Moderate Delay Chance
+133,Singapore Airlines,Hyderabad,Kolkata,Wednesday,16:15,3h 15m,0,Rainy,Low Delay Chance
+134,Akasa Air,Chennai,Mumbai,Sunday,13:30,3h 15m,2,Cloudy,Moderate Delay Chance
+135,Vistara,Mumbai,Pune,Wednesday,16:45,1h 30m,0,Clear,Low Delay Chance
+136,SpiceJet,Kolkata,Hyderabad,Wednesday,19:15,1h 0m,0,Rainy,Low Delay Chance
+137,IndiGo,Kolkata,Bangalore,Sunday,22:00,6h 15m,1,Clear,Moderate Delay Chance
+138,Emirates,Ahmedabad,Delhi,Thursday,09:30,2h 30m,1,Rainy,Moderate Delay Chance
+139,Emirates,Pune,Kolkata,Wednesday,12:45,3h 45m,1,Storm,Moderate Delay Chance
+140,Singapore Airlines,Pune,Mumbai,Wednesday,12:30,6h 15m,2,Cloudy,Moderate Delay Chance
+141,Air India,Delhi,Pune,Tuesday,18:00,3h 45m,2,Clear,Low Delay Chance
+142,Qatar Airways,Mumbai,Kolkata,Sunday,22:45,5h 30m,2,Clear,Moderate Delay Chance
+143,SpiceJet,Bangalore,Ahmedabad,Wednesday,22:30,4h 15m,2,Storm,High Delay Chance
+144,Vistara,Hyderabad,Mumbai,Saturday,16:15,5h 15m,1,Storm,High Delay Chance
+145,Emirates,Bangalore,Ahmedabad,Monday,20:45,2h 0m,0,Cloudy,Low Delay Chance
+146,SpiceJet,Ahmedabad,Mumbai,Wednesday,11:45,3h 45m,0,Rainy,Low Delay Chance
+147,IndiGo,Pune,Hyderabad,Saturday,22:15,5h 0m,1,Clear,Moderate Delay Chance
+148,Emirates,Ahmedabad,Kolkata,Monday,17:30,5h 30m,1,Clear,Low Delay Chance
+149,Vistara,Mumbai,Delhi,Sunday,13:15,6h 0m,0,Rainy,Moderate Delay Chance
+150,Qatar Airways,Ahmedabad,Pune,Friday,10:00,5h 0m,1,Rainy,Moderate Delay Chance
+151,Emirates,Mumbai,Hyderabad,Sunday,22:30,4h 0m,2,Rainy,High Delay Chance
+152,SpiceJet,Kolkata,Mumbai,Wednesday,05:15,5h 0m,1,Rainy,Moderate Delay Chance
+153,IndiGo,Chennai,Bangalore,Monday,07:00,6h 0m,2,Clear,Low Delay Chance
+154,Singapore Airlines,Ahmedabad,Hyderabad,Thursday,16:00,5h 0m,0,Rainy,Low Delay Chance
+155,Emirates,Kolkata,Ahmedabad,Wednesday,11:00,3h 15m,0,Cloudy,Low Delay Chance
+156,Vistara,Hyderabad,Ahmedabad,Wednesday,11:30,3h 45m,0,Clear,Low Delay Chance
+157,SpiceJet,Hyderabad,Ahmedabad,Sunday,06:00,6h 45m,0,Cloudy,Low Delay Chance
+158,Akasa Air,Hyderabad,Chennai,Saturday,15:15,6h 45m,1,Cloudy,Moderate Delay Chance
+159,Singapore Airlines,Bangalore,Chennai,Tuesday,17:45,1h 30m,1,Rainy,Moderate Delay Chance
+160,Emirates,Delhi,Pune,Monday,15:45,5h 45m,0,Cloudy,Low Delay Chance
+161,Emirates,Hyderabad,Pune,Thursday,13:00,6h 30m,0,Clear,Low Delay Chance
+162,Akasa Air,Bangalore,Kolkata,Wednesday,14:30,5h 45m,2,Cloudy,Moderate Delay Chance
+163,Singapore Airlines,Ahmedabad,Chennai,Wednesday,23:30,2h 15m,1,Cloudy,Moderate Delay Chance
+164,Singapore Airlines,Mumbai,Pune,Saturday,23:15,3h 30m,0,Rainy,Moderate Delay Chance
+165,Akasa Air,Mumbai,Delhi,Thursday,12:45,3h 0m,2,Cloudy,Moderate Delay Chance
+166,Vistara,Chennai,Bangalore,Thursday,11:45,4h 0m,2,Rainy,Moderate Delay Chance
+167,Air India,Bangalore,Kolkata,Thursday,23:45,2h 30m,1,Storm,High Delay Chance
+168,SpiceJet,Kolkata,Ahmedabad,Sunday,19:45,4h 15m,2,Rainy,High Delay Chance
+169,Air India,Chennai,Ahmedabad,Tuesday,09:45,2h 30m,0,Clear,Low Delay Chance
+170,Air India,Hyderabad,Delhi,Sunday,12:15,4h 15m,2,Cloudy,Moderate Delay Chance
+171,Singapore Airlines,Pune,Mumbai,Tuesday,19:15,6h 45m,2,Cloudy,Moderate Delay Chance
+172,Akasa Air,Hyderabad,Ahmedabad,Saturday,07:30,4h 15m,2,Cloudy,Moderate Delay Chance
+173,Qatar Airways,Ahmedabad,Pune,Sunday,11:00,2h 0m,1,Cloudy,Moderate Delay Chance
+174,Emirates,Delhi,Bangalore,Thursday,15:45,3h 15m,0,Cloudy,Low Delay Chance
+175,Akasa Air,Chennai,Delhi,Thursday,12:00,1h 45m,2,Rainy,Moderate Delay Chance
+176,SpiceJet,Mumbai,Chennai,Wednesday,15:45,6h 15m,2,Storm,High Delay Chance
+177,SpiceJet,Pune,Mumbai,Sunday,15:00,1h 45m,1,Rainy,Moderate Delay Chance
+178,IndiGo,Pune,Kolkata,Thursday,13:15,3h 45m,1,Cloudy,Low Delay Chance
+179,Air India,Pune,Chennai,Sunday,20:30,1h 45m,2,Storm,High Delay Chance
+180,Singapore Airlines,Pune,Mumbai,Wednesday,10:00,4h 30m,2,Rainy,Moderate Delay Chance
+181,SpiceJet,Bangalore,Mumbai,Friday,10:30,5h 30m,0,Storm,Moderate Delay Chance
+182,Emirates,Delhi,Chennai,Monday,06:15,6h 45m,0,Clear,Low Delay Chance
+183,Vistara,Delhi,Hyderabad,Friday,17:00,6h 0m,2,Clear,Moderate Delay Chance
+184,Air India,Mumbai,Pune,Monday,06:15,4h 15m,1,Storm,Moderate Delay Chance
+185,Akasa Air,Chennai,Pune,Saturday,17:00,2h 45m,1,Rainy,Moderate Delay Chance
+186,Akasa Air,Hyderabad,Mumbai,Wednesday,11:45,1h 15m,0,Cloudy,Low Delay Chance
+187,Singapore Airlines,Chennai,Pune,Saturday,10:45,1h 15m,2,Storm,High Delay Chance
+188,Vistara,Delhi,Ahmedabad,Thursday,06:30,5h 0m,1,Clear,Low Delay Chance
+189,Qatar Airways,Kolkata,Delhi,Monday,21:45,3h 0m,1,Storm,High Delay Chance
+190,Singapore Airlines,Ahmedabad,Hyderabad,Wednesday,19:45,1h 45m,0,Storm,Moderate Delay Chance
+191,Vistara,Mumbai,Pune,Saturday,10:00,6h 45m,1,Rainy,Moderate Delay Chance
+192,Akasa Air,Mumbai,Ahmedabad,Tuesday,17:45,4h 15m,0,Cloudy,Low Delay Chance
+193,Emirates,Bangalore,Pune,Wednesday,15:45,1h 45m,1,Storm,Moderate Delay Chance
+194,Emirates,Kolkata,Pune,Sunday,15:15,5h 15m,0,Cloudy,Low Delay Chance
+195,Vistara,Ahmedabad,Kolkata,Saturday,06:45,4h 0m,0,Cloudy,Low Delay Chance
+196,Akasa Air,Ahmedabad,Delhi,Thursday,11:45,6h 45m,0,Rainy,Low Delay Chance
+197,Vistara,Pune,Delhi,Friday,19:30,3h 45m,2,Rainy,High Delay Chance
+198,Vistara,Hyderabad,Chennai,Tuesday,09:00,4h 0m,2,Clear,Low Delay Chance
+199,Vistara,Pune,Kolkata,Wednesday,13:45,1h 45m,2,Storm,High Delay Chance
+200,Singapore Airlines,Hyderabad,Chennai,Thursday,07:15,2h 45m,1,Storm,Moderate Delay Chance
+201,Vistara,Hyderabad,Ahmedabad,Saturday,06:00,1h 15m,1,Clear,Low Delay Chance
+202,Emirates,Hyderabad,Bangalore,Monday,06:45,6h 45m,1,Storm,Moderate Delay Chance
+203,Akasa Air,Kolkata,Mumbai,Thursday,23:00,5h 0m,2,Clear,Moderate Delay Chance
+204,SpiceJet,Mumbai,Bangalore,Thursday,15:30,4h 30m,1,Rainy,Moderate Delay Chance
+205,Singapore Airlines,Bangalore,Mumbai,Tuesday,19:45,3h 30m,0,Rainy,Low Delay Chance
+206,IndiGo,Mumbai,Hyderabad,Monday,06:45,6h 15m,2,Clear,Low Delay Chance
+207,Emirates,Bangalore,Delhi,Sunday,16:45,4h 0m,1,Storm,High Delay Chance
+208,IndiGo,Pune,Chennai,Friday,17:00,6h 30m,1,Cloudy,Moderate Delay Chance
+209,Akasa Air,Chennai,Mumbai,Tuesday,09:30,1h 0m,2,Storm,High Delay Chance
+210,Air India,Bangalore,Hyderabad,Wednesday,05:15,3h 0m,0,Storm,Moderate Delay Chance
+211,IndiGo,Kolkata,Bangalore,Thursday,18:30,4h 30m,2,Cloudy,Moderate Delay Chance
+212,Air India,Chennai,Hyderabad,Sunday,22:30,2h 15m,1,Storm,High Delay Chance
+213,SpiceJet,Hyderabad,Chennai,Sunday,11:15,2h 30m,1,Clear,Low Delay Chance
+214,Singapore Airlines,Kolkata,Ahmedabad,Friday,18:00,3h 15m,2,Rainy,High Delay Chance
+215,Akasa Air,Pune,Ahmedabad,Tuesday,05:00,5h 0m,1,Cloudy,Low Delay Chance
+216,Qatar Airways,Ahmedabad,Delhi,Sunday,13:30,2h 45m,2,Clear,Moderate Delay Chance
+217,Akasa Air,Hyderabad,Pune,Saturday,21:30,3h 45m,1,Clear,Moderate Delay Chance
+218,Singapore Airlines,Hyderabad,Mumbai,Saturday,20:00,1h 45m,0,Clear,Low Delay Chance
+219,Akasa Air,Bangalore,Ahmedabad,Friday,05:45,1h 0m,2,Rainy,High Delay Chance
+220,Singapore Airlines,Bangalore,Delhi,Tuesday,05:45,2h 45m,2,Cloudy,Moderate Delay Chance
+221,Singapore Airlines,Mumbai,Pune,Monday,21:15,4h 15m,0,Clear,Low Delay Chance
+222,SpiceJet,Hyderabad,Chennai,Saturday,18:00,3h 0m,2,Cloudy,Moderate Delay Chance
+223,IndiGo,Ahmedabad,Delhi,Thursday,18:15,5h 30m,2,Rainy,Moderate Delay Chance
+224,Emirates,Bangalore,Mumbai,Tuesday,11:30,5h 45m,2,Clear,Low Delay Chance
+225,Emirates,Mumbai,Ahmedabad,Thursday,07:00,4h 15m,1,Storm,Moderate Delay Chance
+226,Akasa Air,Kolkata,Pune,Thursday,13:45,6h 15m,0,Cloudy,Low Delay Chance
+227,IndiGo,Chennai,Bangalore,Sunday,14:15,3h 45m,2,Clear,Moderate Delay Chance
+228,IndiGo,Pune,Kolkata,Friday,08:30,6h 45m,1,Cloudy,Moderate Delay Chance
+229,Emirates,Mumbai,Kolkata,Monday,20:45,6h 0m,1,Rainy,Moderate Delay Chance
+230,Qatar Airways,Ahmedabad,Delhi,Friday,14:00,4h 15m,2,Cloudy,Moderate Delay Chance
+231,Vistara,Kolkata,Mumbai,Friday,12:00,5h 30m,2,Clear,Moderate Delay Chance
+232,Qatar Airways,Kolkata,Bangalore,Sunday,07:45,1h 0m,0,Clear,Low Delay Chance
+233,Qatar Airways,Chennai,Delhi,Friday,08:30,2h 15m,1,Rainy,Moderate Delay Chance
+234,Vistara,Hyderabad,Kolkata,Thursday,18:30,6h 45m,1,Rainy,Moderate Delay Chance
+235,Akasa Air,Kolkata,Ahmedabad,Monday,16:00,6h 0m,0,Clear,Low Delay Chance
+236,IndiGo,Delhi,Hyderabad,Thursday,06:45,5h 0m,1,Cloudy,Low Delay Chance
+237,SpiceJet,Kolkata,Bangalore,Wednesday,17:45,4h 45m,2,Rainy,Moderate Delay Chance
+238,Qatar Airways,Delhi,Pune,Sunday,15:30,4h 15m,0,Storm,Moderate Delay Chance
+239,Singapore Airlines,Bangalore,Ahmedabad,Monday,14:15,3h 30m,0,Clear,Low Delay Chance
+240,Vistara,Mumbai,Kolkata,Monday,06:45,2h 45m,2,Storm,High Delay Chance
+241,Vistara,Chennai,Bangalore,Wednesday,12:15,5h 0m,2,Storm,High Delay Chance
+242,IndiGo,Chennai,Hyderabad,Sunday,13:30,2h 30m,0,Cloudy,Low Delay Chance
+243,SpiceJet,Pune,Ahmedabad,Friday,14:45,3h 30m,1,Rainy,Moderate Delay Chance
+244,Singapore Airlines,Bangalore,Ahmedabad,Wednesday,18:45,1h 45m,1,Rainy,Moderate Delay Chance
+245,SpiceJet,Kolkata,Chennai,Friday,07:45,3h 45m,2,Clear,Moderate Delay Chance
+246,SpiceJet,Delhi,Bangalore,Friday,11:45,5h 0m,1,Cloudy,Moderate Delay Chance
+247,Singapore Airlines,Kolkata,Ahmedabad,Saturday,18:15,3h 30m,0,Rainy,Moderate Delay Chance
+248,Singapore Airlines,Pune,Mumbai,Monday,11:15,2h 15m,1,Cloudy,Low Delay Chance
+249,Vistara,Pune,Bangalore,Thursday,17:30,6h 45m,1,Clear,Low Delay Chance
+250,SpiceJet,Chennai,Mumbai,Wednesday,05:00,3h 30m,1,Rainy,Moderate Delay Chance

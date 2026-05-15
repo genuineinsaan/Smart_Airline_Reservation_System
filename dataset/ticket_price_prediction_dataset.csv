@@ -1,0 +1,301 @@
+record_id,airline_name,source,destination,available_day,departure_time,duration,stops,travel_class,available_seats,weather_status,ticket_price
+1,SpiceJet,Hyderabad,Chennai,Monday,21:15,5h 15m,1,Premium Economy,59,Rainy,11587
+2,Air India,Bangalore,Mumbai,Tuesday,07:45,5h 30m,0,Premium Economy,88,Cloudy,14221
+3,Qatar Airways,Pune,Mumbai,Monday,18:45,3h 15m,0,Business,164,Rainy,21945
+4,Akasa Air,Pune,Ahmedabad,Thursday,12:45,1h 45m,2,Business,112,Clear,16301
+5,SpiceJet,Mumbai,Chennai,Sunday,05:30,6h 30m,0,Premium Economy,149,Cloudy,11283
+6,Qatar Airways,Kolkata,Chennai,Monday,09:45,6h 30m,2,Business,126,Cloudy,16583
+7,Akasa Air,Kolkata,Pune,Friday,05:00,1h 0m,2,Premium Economy,141,Storm,10973
+8,Singapore Airlines,Kolkata,Pune,Tuesday,11:45,2h 0m,0,Premium Economy,91,Storm,11053
+9,IndiGo,Hyderabad,Chennai,Monday,11:30,6h 30m,0,Premium Economy,44,Rainy,14318
+10,SpiceJet,Pune,Delhi,Friday,15:15,1h 30m,2,Economy,8,Clear,14185
+11,Qatar Airways,Ahmedabad,Hyderabad,Friday,06:30,2h 30m,1,Business,55,Rainy,18739
+12,IndiGo,Kolkata,Chennai,Wednesday,16:45,4h 0m,2,Economy,137,Clear,5270
+13,Vistara,Mumbai,Kolkata,Wednesday,08:30,1h 45m,2,Economy,178,Rainy,9203
+14,SpiceJet,Kolkata,Bangalore,Friday,22:30,3h 30m,2,Premium Economy,66,Storm,11667
+15,Singapore Airlines,Bangalore,Ahmedabad,Monday,12:00,5h 30m,2,Premium Economy,117,Clear,8703
+16,SpiceJet,Delhi,Ahmedabad,Thursday,06:00,4h 45m,2,Premium Economy,162,Cloudy,10492
+17,IndiGo,Delhi,Pune,Sunday,13:00,6h 0m,2,Premium Economy,91,Clear,9702
+18,Singapore Airlines,Pune,Delhi,Wednesday,05:15,3h 15m,2,Business,29,Cloudy,17575
+19,Vistara,Kolkata,Pune,Friday,11:45,2h 0m,0,Business,179,Cloudy,17860
+20,IndiGo,Hyderabad,Bangalore,Tuesday,20:15,1h 0m,0,Premium Economy,161,Clear,11255
+21,Qatar Airways,Kolkata,Pune,Monday,08:30,6h 0m,0,Premium Economy,78,Cloudy,10358
+22,Qatar Airways,Pune,Mumbai,Sunday,15:00,2h 30m,1,Economy,125,Cloudy,7141
+23,Qatar Airways,Kolkata,Hyderabad,Tuesday,20:45,4h 15m,1,Economy,53,Rainy,5315
+24,SpiceJet,Bangalore,Hyderabad,Wednesday,06:45,2h 30m,2,Business,169,Rainy,17752
+25,Akasa Air,Delhi,Bangalore,Saturday,14:00,2h 0m,1,Premium Economy,16,Storm,13856
+26,Emirates,Delhi,Kolkata,Monday,17:15,4h 45m,0,Business,52,Storm,21915
+27,Singapore Airlines,Bangalore,Kolkata,Sunday,11:30,4h 15m,0,Business,174,Storm,20934
+28,SpiceJet,Pune,Ahmedabad,Friday,06:00,5h 0m,2,Business,7,Storm,21843
+29,Singapore Airlines,Hyderabad,Bangalore,Wednesday,09:30,4h 15m,0,Premium Economy,21,Storm,14829
+30,Singapore Airlines,Mumbai,Hyderabad,Monday,19:30,3h 45m,0,Economy,147,Cloudy,10413
+31,Qatar Airways,Pune,Ahmedabad,Tuesday,06:30,6h 0m,0,Economy,70,Cloudy,10334
+32,Vistara,Bangalore,Hyderabad,Friday,12:00,2h 15m,0,Business,53,Storm,19477
+33,Vistara,Ahmedabad,Chennai,Wednesday,10:15,2h 15m,1,Premium Economy,128,Clear,7903
+34,Emirates,Mumbai,Hyderabad,Wednesday,10:00,1h 30m,0,Economy,73,Cloudy,11190
+35,Vistara,Pune,Mumbai,Saturday,11:30,2h 30m,1,Business,103,Rainy,17851
+36,Akasa Air,Bangalore,Kolkata,Friday,18:15,6h 15m,2,Economy,101,Clear,9823
+37,Qatar Airways,Kolkata,Chennai,Tuesday,19:45,5h 15m,0,Economy,25,Storm,14247
+38,IndiGo,Bangalore,Mumbai,Friday,09:45,1h 30m,2,Economy,180,Cloudy,7178
+39,Akasa Air,Delhi,Kolkata,Monday,17:30,6h 15m,2,Business,140,Storm,15232
+40,SpiceJet,Hyderabad,Mumbai,Monday,20:45,6h 15m,1,Premium Economy,87,Clear,9942
+41,Singapore Airlines,Hyderabad,Pune,Monday,16:45,1h 0m,1,Premium Economy,151,Rainy,8566
+42,IndiGo,Mumbai,Ahmedabad,Sunday,19:45,3h 15m,1,Economy,49,Cloudy,6607
+43,Akasa Air,Bangalore,Ahmedabad,Sunday,08:15,3h 0m,0,Business,111,Rainy,23379
+44,Akasa Air,Hyderabad,Bangalore,Wednesday,09:45,6h 15m,1,Economy,11,Rainy,11538
+45,SpiceJet,Chennai,Ahmedabad,Wednesday,10:00,6h 30m,0,Premium Economy,142,Rainy,11746
+46,Emirates,Delhi,Pune,Tuesday,12:00,5h 0m,1,Business,153,Storm,14675
+47,Singapore Airlines,Hyderabad,Ahmedabad,Monday,17:45,4h 30m,2,Premium Economy,22,Clear,12123
+48,Akasa Air,Ahmedabad,Pune,Saturday,07:45,2h 15m,0,Economy,130,Cloudy,8902
+49,Air India,Kolkata,Hyderabad,Friday,14:15,6h 45m,1,Economy,46,Rainy,9751
+50,Vistara,Mumbai,Ahmedabad,Tuesday,13:00,6h 15m,1,Business,171,Clear,15821
+51,IndiGo,Kolkata,Bangalore,Saturday,21:00,5h 15m,0,Economy,128,Clear,11195
+52,Vistara,Pune,Mumbai,Thursday,21:30,5h 0m,0,Business,12,Storm,21221
+53,Singapore Airlines,Kolkata,Pune,Saturday,13:45,6h 0m,0,Economy,176,Storm,10999
+54,SpiceJet,Chennai,Delhi,Friday,05:15,3h 15m,1,Economy,128,Clear,6505
+55,IndiGo,Chennai,Hyderabad,Sunday,12:45,5h 45m,0,Business,97,Clear,18984
+56,Emirates,Bangalore,Mumbai,Monday,19:15,3h 0m,0,Economy,35,Clear,6599
+57,Vistara,Pune,Ahmedabad,Sunday,14:00,6h 0m,2,Economy,171,Clear,9567
+58,Qatar Airways,Bangalore,Ahmedabad,Sunday,08:45,3h 15m,2,Premium Economy,117,Cloudy,11129
+59,Vistara,Kolkata,Pune,Thursday,18:30,6h 0m,2,Business,63,Cloudy,12810
+60,Vistara,Ahmedabad,Chennai,Wednesday,22:30,1h 45m,1,Premium Economy,75,Rainy,11452
+61,SpiceJet,Pune,Kolkata,Tuesday,15:00,5h 15m,1,Economy,31,Storm,9870
+62,Singapore Airlines,Kolkata,Pune,Sunday,15:30,2h 0m,0,Business,98,Cloudy,20471
+63,Air India,Bangalore,Ahmedabad,Tuesday,19:00,6h 30m,0,Business,142,Storm,21118
+64,Akasa Air,Mumbai,Hyderabad,Monday,14:15,5h 0m,0,Premium Economy,25,Cloudy,12639
+65,Emirates,Bangalore,Ahmedabad,Wednesday,20:00,2h 45m,1,Business,110,Cloudy,14103
+66,Akasa Air,Pune,Hyderabad,Friday,15:15,4h 45m,2,Economy,67,Rainy,10093
+67,Singapore Airlines,Mumbai,Delhi,Wednesday,18:45,3h 30m,2,Business,153,Storm,15464
+68,Emirates,Kolkata,Pune,Saturday,08:30,2h 45m,2,Premium Economy,69,Rainy,14255
+69,Air India,Delhi,Bangalore,Monday,12:30,3h 15m,1,Premium Economy,73,Rainy,11705
+70,Emirates,Ahmedabad,Pune,Monday,21:30,5h 45m,2,Economy,113,Rainy,8006
+71,Vistara,Pune,Chennai,Wednesday,20:45,1h 0m,0,Economy,29,Cloudy,13436
+72,SpiceJet,Hyderabad,Ahmedabad,Tuesday,06:00,6h 15m,0,Economy,166,Rainy,11561
+73,Akasa Air,Bangalore,Ahmedabad,Thursday,07:30,1h 15m,2,Business,16,Storm,18696
+74,Air India,Pune,Chennai,Thursday,09:00,6h 15m,2,Economy,34,Cloudy,7919
+75,Akasa Air,Chennai,Ahmedabad,Sunday,14:45,6h 15m,0,Economy,110,Cloudy,13025
+76,Singapore Airlines,Kolkata,Bangalore,Thursday,16:30,3h 15m,2,Business,76,Rainy,16227
+77,Singapore Airlines,Bangalore,Hyderabad,Friday,11:45,2h 45m,0,Premium Economy,166,Clear,14659
+78,Air India,Delhi,Chennai,Sunday,19:30,4h 15m,1,Economy,78,Cloudy,5642
+79,Emirates,Chennai,Mumbai,Sunday,20:15,5h 0m,1,Business,95,Storm,17536
+80,Vistara,Kolkata,Mumbai,Monday,16:00,5h 30m,1,Premium Economy,36,Clear,7678
+81,Emirates,Kolkata,Mumbai,Friday,10:45,4h 0m,2,Business,33,Storm,16140
+82,Akasa Air,Hyderabad,Pune,Thursday,21:45,4h 15m,1,Business,119,Clear,13275
+83,Vistara,Ahmedabad,Hyderabad,Saturday,16:00,2h 30m,0,Premium Economy,104,Rainy,17389
+84,Air India,Delhi,Mumbai,Saturday,07:15,4h 45m,2,Economy,63,Clear,6467
+85,Emirates,Chennai,Bangalore,Friday,08:00,3h 30m,2,Premium Economy,51,Clear,10475
+86,IndiGo,Delhi,Hyderabad,Saturday,10:45,6h 0m,2,Business,68,Rainy,18362
+87,Emirates,Mumbai,Ahmedabad,Friday,12:00,5h 45m,1,Economy,95,Rainy,9023
+88,Vistara,Chennai,Delhi,Friday,19:00,5h 45m,2,Business,33,Rainy,17836
+89,Qatar Airways,Mumbai,Bangalore,Wednesday,16:45,3h 45m,2,Business,135,Rainy,16820
+90,Singapore Airlines,Delhi,Bangalore,Sunday,07:45,2h 15m,0,Premium Economy,80,Rainy,16908
+91,SpiceJet,Hyderabad,Ahmedabad,Sunday,11:45,5h 0m,1,Premium Economy,140,Clear,11377
+92,Qatar Airways,Chennai,Kolkata,Wednesday,05:30,6h 30m,1,Business,166,Cloudy,13486
+93,Emirates,Pune,Bangalore,Thursday,14:30,2h 45m,0,Premium Economy,33,Clear,13345
+94,Air India,Delhi,Mumbai,Wednesday,16:15,3h 0m,0,Economy,139,Clear,11409
+95,Qatar Airways,Chennai,Bangalore,Tuesday,08:00,3h 30m,0,Economy,66,Cloudy,10249
+96,Akasa Air,Bangalore,Ahmedabad,Thursday,07:00,2h 30m,2,Premium Economy,108,Clear,10334
+97,Vistara,Pune,Kolkata,Saturday,21:30,5h 45m,2,Business,35,Rainy,17188
+98,IndiGo,Mumbai,Kolkata,Thursday,14:45,6h 45m,2,Premium Economy,96,Rainy,12093
+99,SpiceJet,Hyderabad,Pune,Tuesday,17:45,1h 45m,0,Economy,87,Storm,8417
+100,Emirates,Mumbai,Delhi,Thursday,10:00,5h 30m,2,Business,152,Storm,14400
+101,Air India,Bangalore,Mumbai,Monday,11:45,2h 0m,0,Business,160,Storm,21060
+102,Air India,Hyderabad,Delhi,Wednesday,19:45,6h 30m,0,Premium Economy,141,Clear,13002
+103,Akasa Air,Hyderabad,Pune,Tuesday,10:00,4h 0m,0,Business,119,Cloudy,16597
+104,IndiGo,Chennai,Bangalore,Friday,19:30,6h 0m,0,Business,111,Rainy,18623
+105,Singapore Airlines,Mumbai,Chennai,Monday,18:30,3h 15m,0,Business,137,Storm,20997
+106,Akasa Air,Hyderabad,Chennai,Saturday,16:00,6h 0m,2,Premium Economy,18,Storm,18567
+107,Akasa Air,Kolkata,Mumbai,Wednesday,20:00,3h 0m,2,Premium Economy,101,Storm,9354
+108,Akasa Air,Mumbai,Delhi,Thursday,06:30,1h 0m,2,Economy,168,Storm,5882
+109,Qatar Airways,Delhi,Hyderabad,Saturday,13:45,2h 15m,1,Premium Economy,63,Storm,12197
+110,IndiGo,Bangalore,Pune,Tuesday,11:45,1h 0m,2,Premium Economy,60,Rainy,8772
+111,SpiceJet,Hyderabad,Kolkata,Friday,21:00,2h 0m,1,Business,124,Storm,18204
+112,IndiGo,Pune,Hyderabad,Tuesday,12:00,6h 30m,1,Premium Economy,62,Rainy,10013
+113,Emirates,Ahmedabad,Chennai,Sunday,20:45,6h 30m,0,Premium Economy,145,Cloudy,14323
+114,Air India,Ahmedabad,Kolkata,Monday,19:30,2h 30m,1,Premium Economy,57,Cloudy,7241
+115,IndiGo,Pune,Kolkata,Wednesday,08:45,3h 45m,0,Business,35,Cloudy,17563
+116,Vistara,Mumbai,Pune,Saturday,20:30,3h 15m,1,Business,88,Rainy,17859
+117,Akasa Air,Delhi,Chennai,Tuesday,21:30,1h 15m,2,Premium Economy,152,Rainy,10150
+118,Emirates,Delhi,Bangalore,Sunday,08:00,6h 15m,2,Business,52,Clear,18497
+119,Akasa Air,Chennai,Delhi,Monday,18:15,4h 0m,0,Business,102,Cloudy,15102
+120,Akasa Air,Hyderabad,Delhi,Friday,20:00,3h 45m,0,Premium Economy,60,Storm,16350
+121,SpiceJet,Hyderabad,Chennai,Saturday,15:30,1h 45m,1,Economy,107,Storm,8199
+122,Air India,Ahmedabad,Pune,Tuesday,13:30,5h 0m,1,Business,149,Clear,15709
+123,SpiceJet,Mumbai,Kolkata,Saturday,12:30,4h 0m,0,Premium Economy,58,Storm,16523
+124,SpiceJet,Pune,Mumbai,Wednesday,20:45,3h 0m,1,Business,110,Storm,17741
+125,IndiGo,Bangalore,Ahmedabad,Sunday,18:45,5h 15m,0,Economy,164,Cloudy,8597
+126,Air India,Mumbai,Delhi,Saturday,14:45,6h 45m,0,Business,137,Clear,19158
+127,Vistara,Ahmedabad,Kolkata,Saturday,12:45,1h 45m,2,Premium Economy,66,Storm,12431
+128,Vistara,Ahmedabad,Mumbai,Thursday,17:30,1h 0m,0,Business,131,Cloudy,17747
+129,IndiGo,Hyderabad,Pune,Saturday,09:30,3h 0m,0,Business,99,Clear,20959
+130,IndiGo,Chennai,Pune,Monday,16:30,4h 15m,1,Premium Economy,90,Cloudy,8393
+131,Singapore Airlines,Chennai,Bangalore,Monday,12:30,1h 30m,1,Economy,105,Storm,6293
+132,Vistara,Pune,Delhi,Thursday,13:15,2h 30m,0,Economy,42,Clear,9305
+133,Vistara,Kolkata,Bangalore,Friday,19:30,1h 45m,0,Premium Economy,96,Clear,15251
+134,Singapore Airlines,Ahmedabad,Hyderabad,Sunday,14:45,2h 45m,2,Business,44,Clear,16150
+135,IndiGo,Delhi,Ahmedabad,Sunday,10:00,6h 45m,1,Economy,39,Rainy,10782
+136,SpiceJet,Mumbai,Kolkata,Sunday,12:45,4h 45m,1,Economy,177,Storm,9654
+137,SpiceJet,Pune,Bangalore,Sunday,20:45,3h 45m,2,Economy,7,Cloudy,10438
+138,SpiceJet,Ahmedabad,Mumbai,Thursday,16:00,1h 0m,0,Premium Economy,147,Storm,13399
+139,Vistara,Mumbai,Kolkata,Monday,18:45,6h 45m,2,Economy,144,Storm,7061
+140,IndiGo,Kolkata,Ahmedabad,Tuesday,18:30,5h 45m,2,Business,170,Rainy,16446
+141,Qatar Airways,Delhi,Kolkata,Thursday,18:45,3h 45m,1,Business,108,Cloudy,15466
+142,Vistara,Delhi,Chennai,Friday,07:30,5h 15m,0,Economy,93,Rainy,12502
+143,SpiceJet,Bangalore,Delhi,Saturday,08:30,1h 45m,2,Premium Economy,65,Clear,11288
+144,IndiGo,Mumbai,Pune,Sunday,14:15,5h 0m,2,Business,155,Cloudy,16357
+145,Akasa Air,Mumbai,Delhi,Saturday,12:00,2h 0m,2,Premium Economy,35,Cloudy,10251
+146,Qatar Airways,Pune,Ahmedabad,Friday,10:45,2h 0m,1,Premium Economy,38,Clear,13848
+147,Singapore Airlines,Delhi,Bangalore,Sunday,11:30,3h 15m,0,Economy,114,Rainy,10750
+148,Emirates,Chennai,Kolkata,Sunday,14:00,2h 15m,2,Economy,28,Cloudy,13060
+149,IndiGo,Pune,Chennai,Friday,12:15,2h 0m,1,Economy,47,Clear,10825
+150,Emirates,Ahmedabad,Pune,Friday,15:45,1h 30m,0,Premium Economy,108,Storm,13741
+151,Qatar Airways,Delhi,Hyderabad,Monday,17:45,3h 30m,1,Business,86,Clear,12657
+152,Qatar Airways,Hyderabad,Kolkata,Monday,06:30,2h 15m,1,Economy,41,Storm,6595
+153,Emirates,Delhi,Pune,Sunday,16:45,2h 15m,1,Premium Economy,84,Rainy,13607
+154,Akasa Air,Delhi,Kolkata,Friday,08:15,6h 45m,2,Premium Economy,91,Rainy,14725
+155,IndiGo,Bangalore,Mumbai,Thursday,19:45,4h 15m,0,Business,159,Cloudy,19492
+156,Emirates,Delhi,Pune,Sunday,15:30,3h 15m,1,Economy,75,Rainy,10841
+157,Akasa Air,Pune,Kolkata,Tuesday,20:45,3h 0m,1,Premium Economy,148,Clear,8061
+158,SpiceJet,Hyderabad,Kolkata,Monday,12:30,1h 0m,2,Economy,15,Cloudy,8428
+159,Qatar Airways,Pune,Kolkata,Sunday,22:45,5h 30m,1,Business,104,Clear,17739
+160,IndiGo,Chennai,Pune,Thursday,06:45,3h 0m,2,Business,59,Clear,14389
+161,SpiceJet,Ahmedabad,Pune,Thursday,17:45,6h 30m,2,Economy,180,Clear,5368
+162,Emirates,Delhi,Ahmedabad,Saturday,16:30,5h 30m,2,Economy,143,Storm,9511
+163,SpiceJet,Ahmedabad,Bangalore,Thursday,14:45,5h 30m,2,Economy,17,Clear,7910
+164,Air India,Ahmedabad,Delhi,Saturday,18:45,6h 15m,1,Business,107,Storm,17341
+165,SpiceJet,Hyderabad,Delhi,Tuesday,06:00,6h 45m,2,Premium Economy,148,Storm,8410
+166,Akasa Air,Chennai,Hyderabad,Monday,12:45,5h 45m,0,Premium Economy,109,Rainy,15716
+167,Emirates,Pune,Hyderabad,Saturday,18:15,4h 0m,1,Business,115,Storm,19193
+168,Vistara,Bangalore,Mumbai,Friday,13:30,5h 15m,0,Economy,15,Clear,14060
+169,SpiceJet,Chennai,Ahmedabad,Saturday,13:00,2h 30m,1,Economy,144,Cloudy,6106
+170,Akasa Air,Chennai,Pune,Monday,11:15,4h 0m,1,Business,13,Clear,18818
+171,Qatar Airways,Mumbai,Chennai,Monday,22:30,3h 30m,2,Premium Economy,91,Storm,12098
+172,Akasa Air,Chennai,Ahmedabad,Friday,10:00,2h 45m,1,Business,94,Rainy,19370
+173,Vistara,Chennai,Hyderabad,Tuesday,12:00,1h 0m,2,Business,79,Clear,13116
+174,IndiGo,Delhi,Hyderabad,Thursday,09:00,3h 45m,2,Economy,88,Storm,5366
+175,Akasa Air,Bangalore,Pune,Saturday,05:45,6h 45m,1,Economy,128,Storm,8979
+176,Emirates,Mumbai,Delhi,Wednesday,05:45,5h 0m,1,Premium Economy,34,Storm,9475
+177,Air India,Chennai,Mumbai,Thursday,08:45,5h 15m,0,Economy,95,Storm,7942
+178,Air India,Delhi,Pune,Sunday,12:30,1h 15m,2,Premium Economy,169,Clear,9307
+179,Vistara,Pune,Delhi,Sunday,09:00,2h 0m,0,Business,152,Rainy,20815
+180,Akasa Air,Kolkata,Chennai,Friday,15:15,5h 45m,1,Premium Economy,75,Storm,10271
+181,Akasa Air,Delhi,Chennai,Thursday,12:30,5h 15m,1,Premium Economy,55,Cloudy,10071
+182,IndiGo,Delhi,Ahmedabad,Saturday,09:15,2h 45m,2,Economy,27,Rainy,15894
+183,IndiGo,Ahmedabad,Pune,Saturday,14:00,1h 0m,2,Economy,33,Rainy,7157
+184,IndiGo,Chennai,Bangalore,Wednesday,05:00,3h 15m,1,Business,104,Clear,14901
+185,Vistara,Pune,Bangalore,Thursday,15:45,3h 0m,2,Premium Economy,51,Storm,8392
+186,SpiceJet,Ahmedabad,Hyderabad,Thursday,13:15,1h 0m,1,Premium Economy,11,Rainy,12840
+187,SpiceJet,Pune,Hyderabad,Thursday,08:00,2h 45m,2,Premium Economy,160,Cloudy,7912
+188,Akasa Air,Mumbai,Chennai,Tuesday,06:00,3h 45m,0,Premium Economy,62,Rainy,13547
+189,Vistara,Hyderabad,Chennai,Sunday,16:00,5h 15m,0,Premium Economy,29,Storm,19874
+190,Vistara,Delhi,Mumbai,Wednesday,20:00,1h 15m,1,Premium Economy,154,Clear,8811
+191,Qatar Airways,Kolkata,Delhi,Sunday,06:15,3h 30m,0,Business,50,Clear,21675
+192,IndiGo,Hyderabad,Kolkata,Wednesday,09:45,5h 0m,2,Premium Economy,88,Cloudy,8841
+193,Emirates,Ahmedabad,Chennai,Thursday,05:15,1h 30m,0,Business,133,Cloudy,18132
+194,Emirates,Ahmedabad,Bangalore,Sunday,17:30,2h 0m,2,Economy,7,Rainy,11232
+195,Akasa Air,Mumbai,Bangalore,Friday,17:45,1h 0m,1,Premium Economy,160,Cloudy,13881
+196,Singapore Airlines,Pune,Delhi,Saturday,17:15,4h 0m,0,Premium Economy,70,Cloudy,15612
+197,Vistara,Chennai,Hyderabad,Wednesday,07:30,6h 45m,1,Economy,75,Clear,5096
+198,Akasa Air,Bangalore,Ahmedabad,Tuesday,05:30,5h 45m,1,Premium Economy,116,Storm,12189
+199,Emirates,Chennai,Mumbai,Wednesday,13:30,5h 15m,0,Business,8,Storm,21197
+200,Emirates,Bangalore,Kolkata,Sunday,09:00,6h 45m,1,Business,38,Clear,16922
+201,Akasa Air,Pune,Kolkata,Monday,20:15,3h 45m,1,Premium Economy,46,Cloudy,11456
+202,Qatar Airways,Hyderabad,Delhi,Friday,07:15,3h 0m,1,Business,59,Clear,17276
+203,Emirates,Hyderabad,Ahmedabad,Wednesday,18:00,6h 0m,2,Business,48,Rainy,16729
+204,Qatar Airways,Pune,Mumbai,Saturday,07:00,6h 30m,1,Business,152,Storm,18062
+205,Vistara,Delhi,Mumbai,Wednesday,19:30,6h 45m,1,Business,51,Storm,17986
+206,SpiceJet,Chennai,Kolkata,Thursday,10:15,5h 45m,0,Business,65,Clear,17566
+207,Vistara,Bangalore,Pune,Saturday,15:00,5h 0m,0,Economy,8,Storm,14965
+208,Akasa Air,Mumbai,Kolkata,Friday,07:45,1h 15m,0,Premium Economy,84,Storm,16377
+209,Air India,Ahmedabad,Mumbai,Saturday,15:15,6h 0m,2,Business,83,Storm,16480
+210,SpiceJet,Ahmedabad,Kolkata,Thursday,11:30,6h 30m,0,Business,106,Storm,21672
+211,IndiGo,Kolkata,Bangalore,Friday,17:30,2h 15m,2,Premium Economy,168,Cloudy,9187
+212,Akasa Air,Chennai,Bangalore,Monday,09:15,5h 45m,0,Economy,160,Storm,11611
+213,Emirates,Pune,Kolkata,Wednesday,06:45,5h 30m,1,Economy,57,Storm,7230
+214,Akasa Air,Chennai,Hyderabad,Wednesday,19:00,5h 30m,1,Business,89,Storm,17005
+215,Vistara,Chennai,Mumbai,Monday,21:30,6h 45m,1,Business,102,Clear,16269
+216,Emirates,Kolkata,Bangalore,Wednesday,18:45,2h 30m,1,Business,103,Storm,16033
+217,SpiceJet,Hyderabad,Ahmedabad,Sunday,21:30,4h 30m,2,Economy,122,Clear,7889
+218,Akasa Air,Hyderabad,Delhi,Friday,14:15,2h 30m,0,Premium Economy,147,Storm,13602
+219,IndiGo,Kolkata,Hyderabad,Thursday,22:15,1h 0m,1,Business,65,Clear,15716
+220,SpiceJet,Ahmedabad,Delhi,Saturday,12:45,4h 15m,2,Business,40,Cloudy,18595
+221,Emirates,Chennai,Kolkata,Friday,21:45,5h 30m,0,Premium Economy,163,Cloudy,14849
+222,SpiceJet,Mumbai,Pune,Friday,16:00,3h 15m,0,Business,157,Rainy,22187
+223,Qatar Airways,Pune,Chennai,Monday,12:30,4h 0m,0,Economy,156,Storm,7543
+224,SpiceJet,Mumbai,Chennai,Saturday,09:15,5h 30m,1,Premium Economy,47,Storm,15425
+225,Air India,Chennai,Mumbai,Thursday,10:15,6h 15m,2,Premium Economy,111,Clear,8323
+226,Emirates,Bangalore,Pune,Saturday,18:00,6h 0m,1,Premium Economy,159,Cloudy,9212
+227,Singapore Airlines,Hyderabad,Ahmedabad,Friday,09:30,3h 30m,0,Business,140,Cloudy,18968
+228,SpiceJet,Bangalore,Hyderabad,Monday,12:30,4h 15m,0,Premium Economy,71,Rainy,13210
+229,Emirates,Pune,Bangalore,Sunday,09:00,3h 30m,1,Premium Economy,11,Rainy,18295
+230,Akasa Air,Delhi,Kolkata,Thursday,14:00,3h 15m,1,Economy,155,Rainy,7285
+231,Vistara,Mumbai,Ahmedabad,Saturday,18:00,4h 30m,1,Premium Economy,54,Clear,10535
+232,IndiGo,Chennai,Kolkata,Sunday,18:00,3h 45m,2,Business,118,Clear,19464
+233,Air India,Chennai,Bangalore,Tuesday,13:30,5h 0m,1,Premium Economy,155,Cloudy,10655
+234,Akasa Air,Ahmedabad,Mumbai,Monday,14:30,1h 15m,1,Premium Economy,179,Rainy,11728
+235,SpiceJet,Chennai,Delhi,Tuesday,06:45,5h 15m,1,Premium Economy,61,Cloudy,7792
+236,SpiceJet,Ahmedabad,Pune,Thursday,14:30,2h 30m,1,Business,150,Storm,18164
+237,Singapore Airlines,Chennai,Ahmedabad,Monday,06:45,6h 15m,0,Economy,144,Storm,8293
+238,Singapore Airlines,Pune,Chennai,Friday,05:45,4h 45m,0,Economy,128,Clear,8338
+239,Qatar Airways,Mumbai,Ahmedabad,Tuesday,09:45,3h 45m,2,Business,19,Cloudy,19670
+240,Singapore Airlines,Hyderabad,Delhi,Thursday,05:30,6h 45m,1,Economy,100,Storm,5847
+241,Air India,Pune,Ahmedabad,Tuesday,05:45,1h 0m,2,Business,61,Clear,15837
+242,Emirates,Pune,Hyderabad,Thursday,12:30,6h 0m,0,Economy,96,Cloudy,9867
+243,Qatar Airways,Chennai,Delhi,Wednesday,16:15,4h 30m,2,Economy,88,Clear,4049
+244,IndiGo,Delhi,Pune,Saturday,14:00,2h 45m,0,Economy,30,Clear,8845
+245,SpiceJet,Ahmedabad,Pune,Sunday,19:45,1h 30m,0,Premium Economy,17,Clear,16802
+246,Qatar Airways,Kolkata,Mumbai,Friday,19:45,4h 45m,2,Business,50,Clear,15352
+247,IndiGo,Bangalore,Delhi,Saturday,09:45,1h 15m,2,Premium Economy,114,Storm,15472
+248,IndiGo,Bangalore,Mumbai,Monday,21:45,1h 45m,0,Economy,135,Rainy,7625
+249,Akasa Air,Chennai,Ahmedabad,Thursday,08:15,4h 15m,2,Premium Economy,116,Clear,8326
+250,Qatar Airways,Mumbai,Bangalore,Saturday,13:45,3h 45m,1,Premium Economy,162,Rainy,11692
+251,Akasa Air,Delhi,Bangalore,Friday,09:30,2h 30m,2,Business,64,Clear,19248
+252,Qatar Airways,Hyderabad,Bangalore,Thursday,08:00,3h 30m,0,Premium Economy,180,Clear,11768
+253,Emirates,Chennai,Pune,Thursday,09:30,5h 30m,2,Premium Economy,104,Clear,7820
+254,Akasa Air,Pune,Kolkata,Sunday,16:00,1h 0m,2,Business,128,Rainy,18210
+255,IndiGo,Chennai,Hyderabad,Friday,20:45,1h 15m,0,Economy,26,Clear,13066
+256,Emirates,Kolkata,Mumbai,Monday,07:15,4h 45m,0,Premium Economy,10,Cloudy,14315
+257,Emirates,Mumbai,Kolkata,Tuesday,20:15,1h 0m,0,Business,36,Rainy,19795
+258,Akasa Air,Kolkata,Ahmedabad,Tuesday,18:30,6h 45m,1,Premium Economy,171,Rainy,9718
+259,Air India,Pune,Hyderabad,Saturday,12:15,2h 45m,2,Business,148,Rainy,19266
+260,Singapore Airlines,Mumbai,Pune,Tuesday,05:30,6h 15m,2,Economy,94,Storm,5904
+261,Akasa Air,Ahmedabad,Hyderabad,Wednesday,09:15,6h 30m,0,Economy,45,Clear,9869
+262,SpiceJet,Delhi,Kolkata,Sunday,16:15,4h 45m,0,Business,85,Clear,20704
+263,Air India,Delhi,Ahmedabad,Saturday,12:00,2h 30m,2,Business,95,Cloudy,19335
+264,Emirates,Delhi,Ahmedabad,Monday,08:45,2h 30m,2,Business,20,Cloudy,21225
+265,IndiGo,Mumbai,Kolkata,Monday,17:15,5h 45m,1,Premium Economy,173,Cloudy,9133
+266,SpiceJet,Hyderabad,Chennai,Monday,19:45,4h 30m,2,Economy,95,Storm,8834
+267,Air India,Ahmedabad,Hyderabad,Tuesday,15:15,4h 15m,1,Premium Economy,72,Rainy,12454
+268,Air India,Bangalore,Kolkata,Monday,18:15,5h 45m,1,Premium Economy,167,Clear,11612
+269,Qatar Airways,Hyderabad,Ahmedabad,Wednesday,11:45,3h 15m,2,Business,77,Storm,17598
+270,Qatar Airways,Mumbai,Hyderabad,Monday,10:30,4h 30m,1,Economy,155,Rainy,7001
+271,Vistara,Delhi,Bangalore,Friday,22:30,1h 45m,0,Premium Economy,155,Rainy,14085
+272,Vistara,Mumbai,Kolkata,Wednesday,09:00,4h 30m,2,Premium Economy,150,Storm,9240
+273,Emirates,Delhi,Chennai,Monday,16:45,5h 15m,2,Premium Economy,58,Storm,10227
+274,Singapore Airlines,Chennai,Pune,Thursday,10:00,1h 45m,0,Premium Economy,173,Cloudy,12971
+275,Singapore Airlines,Chennai,Kolkata,Wednesday,11:30,1h 0m,2,Economy,38,Clear,6356
+276,Emirates,Kolkata,Chennai,Monday,09:30,1h 15m,1,Premium Economy,27,Rainy,16308
+277,SpiceJet,Hyderabad,Chennai,Tuesday,15:30,2h 30m,1,Premium Economy,9,Clear,15060
+278,Air India,Delhi,Kolkata,Thursday,10:15,1h 30m,0,Premium Economy,76,Storm,15461
+279,Emirates,Bangalore,Chennai,Sunday,11:45,2h 45m,0,Business,151,Rainy,23782
+280,SpiceJet,Pune,Delhi,Tuesday,11:30,1h 45m,0,Premium Economy,169,Rainy,14608
+281,IndiGo,Kolkata,Mumbai,Tuesday,18:45,2h 45m,2,Business,163,Storm,16708
+282,SpiceJet,Bangalore,Delhi,Sunday,18:00,2h 0m,1,Economy,151,Storm,8193
+283,Akasa Air,Mumbai,Hyderabad,Thursday,05:15,3h 30m,0,Economy,28,Storm,12826
+284,Akasa Air,Kolkata,Hyderabad,Thursday,16:30,1h 45m,2,Premium Economy,100,Clear,8628
+285,Air India,Bangalore,Kolkata,Thursday,05:30,6h 45m,0,Premium Economy,73,Clear,11609
+286,Qatar Airways,Chennai,Ahmedabad,Wednesday,11:15,4h 0m,1,Economy,85,Cloudy,7005
+287,SpiceJet,Ahmedabad,Delhi,Monday,16:45,6h 15m,2,Business,51,Rainy,15003
+288,Qatar Airways,Ahmedabad,Bangalore,Sunday,05:30,4h 30m,1,Business,90,Rainy,16974
+289,SpiceJet,Mumbai,Pune,Wednesday,12:30,3h 45m,2,Economy,80,Storm,7564
+290,Vistara,Hyderabad,Mumbai,Thursday,22:15,3h 30m,1,Premium Economy,38,Storm,8493
+291,Air India,Ahmedabad,Bangalore,Wednesday,09:15,5h 45m,1,Economy,124,Storm,7888
+292,Emirates,Mumbai,Bangalore,Sunday,22:15,4h 15m,2,Business,108,Rainy,21074
+293,Singapore Airlines,Mumbai,Hyderabad,Monday,22:30,3h 15m,1,Economy,114,Rainy,7996
+294,SpiceJet,Bangalore,Hyderabad,Saturday,21:30,3h 30m,1,Premium Economy,98,Clear,10170
+295,Akasa Air,Delhi,Pune,Wednesday,20:15,6h 30m,1,Economy,33,Cloudy,8567
+296,IndiGo,Pune,Kolkata,Tuesday,09:30,3h 0m,1,Business,8,Storm,21719
+297,Qatar Airways,Pune,Chennai,Saturday,21:30,5h 15m,1,Premium Economy,69,Cloudy,12223
+298,Qatar Airways,Delhi,Chennai,Friday,14:15,6h 0m,1,Business,131,Storm,16537
+299,IndiGo,Kolkata,Hyderabad,Sunday,08:00,3h 45m,0,Business,157,Rainy,18718
+300,Akasa Air,Hyderabad,Ahmedabad,Monday,14:00,2h 15m,2,Economy,165,Clear,5971
