@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Flights</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="manage-flight-page">
+
+    <div class="manage-flight-card">
+
+
+        <!-- HEADER -->
+
+        <div class="manage-flight-header">
+
+            <h1>Manage Flights</h1>
+
+            <p>
+                Add and manage airline schedules
+                and smart AI-powered flight details.
+            </p>
+
+        </div>
+
+
+        <!-- AI NOTICE -->
+
+        <div class="ai-prediction-banner">
+
+            ✈ AI will automatically generate:
+            Delay Prediction,
+            Demand Analysis,
+            and Smart Flight Insights.
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST"
+              class="manage-flight-form">
+
+            <div class="manage-grid">
+
+
+                {% set input_fields = [
+
+                    ('Airline Name', 'text',
+                    'airline_name',
+                    'Enter Airline Name'),
+
+                    ('Source City', 'text',
+                    'source',
+                    'Enter Source City'),
+
+                    ('Destination City', 'text',
+                    'destination',
+                    'Enter Destination City'),
+
+                    ('Departure Time', 'time',
+                    'departure_time', ''),
+
+                    ('Arrival Time',
+                    'datetime-local',
+                    'arrival_time', ''),
+
+                    ('Duration', 'text',
+                    'duration',
+                    'Example: 2h 30m'),
+
+                    ('Number of Stops',
+                    'number',
+                    'stops',
+                    'Enter Stops'),
+
+                    ('Ticket Price',
+                    'number',
+                    'ticket_price',
+                    'Ticket Price')
+
+                ] %}
+
+
+                {% for label, type, name, placeholder in input_fields %}
+
+                <div class="manage-input-box">
+
+                    <label>{{ label }}</label>
+
+                    <input type="{{ type }}"
+                           name="{{ name }}"
+                           placeholder="{{ placeholder }}"
+                           {% if name == 'ticket_price' %}
+                           step="0.01"
+                           {% endif %}
+                           required>
+
+                </div>
+
+                {% endfor %}
+
+
+                <!-- AVAILABLE DAY -->
+
+                <div class="manage-input-box">
+
+                    <label>Available Day</label>
+
+                    <select name="available_day"
+                            required>
+
+                        <option value="">
+                            Select Day
+                        </option>
+
+                        {% for day in [
+
+                            'Monday',
+                            'Tuesday',
+                            'Wednesday',
+                            'Thursday',
+                            'Friday',
+                            'Saturday',
+                            'Sunday'
+
+                        ] %}
+
+                        <option value="{{ day }}">
+
+                            {{ day }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- WEATHER -->
+
+                <div class="manage-input-box">
+
+                    <label>Weather Status</label>
+
+                    <select name="weather_status"
+                            required>
+
+                        <option value="">
+                            Select Weather
+                        </option>
+
+                        {% for weather in [
+
+                            'Clear',
+                            'Cloudy',
+                            'Drizzle',
+                            'Heavy Rain',
+                            'Fog',
+                            'Storm'
+
+                        ] %}
+
+                        <option value="{{ weather }}">
+
+                            {{ weather }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="manage-flight-btn">
+
+                Add Flight
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

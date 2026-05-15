@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+<!-- DASHBOARD NAVBAR -->
+
+<div class="dashboard-navbar">
+
+    <div class="dashboard-nav-logo">
+
+        Airline Reservation System
+
+    </div>
+
+    <a href="/"
+       class="dashboard-home-link">
+
+        <button class="dashboard-home-btn">
+
+            Home
+
+        </button>
+
+    </a>
+
+</div>
+
+
+<div class="premium-dashboard">
+
+
+    <!-- HERO SECTION -->
+
+    <div class="premium-dashboard-hero">
+
+        <div class="premium-dashboard-overlay">
+
+            <h1>
+
+                Welcome, {{ user.full_name }}
+
+            </h1>
+
+            <p>
+
+                Manage your bookings,
+                flights and account activity.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROFILE CARD -->
+
+    <div class="premium-profile-card">
+
+
+        <!-- TITLE -->
+
+        <div class="profile-title-section">
+
+            <div class="profile-circle">👤</div>
+
+            <div>
+
+                <h2>Your Profile</h2>
+
+                <p>
+
+                    Personal account information
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- USER ID -->
+
+        <div class="premium-user-id-box">
+
+            <span>Unique User ID</span>
+
+            <h2>{{ user.unique_user_id }}</h2>
+
+        </div>
+
+
+        <!-- PROFILE GRID -->
+
+        <div class="premium-profile-grid">
+
+            {% set profile_data = [
+
+                ('Email Address', user.email),
+                ('Phone Number', user.phone),
+                ('Gender', user.gender),
+                ('Country', user.country)
+
+            ] %}
+
+            {% for label, value in profile_data %}
+
+            <div class="premium-info-box">
+
+                <span>{{ label }}</span>
+
+                <h3>{{ value }}</h3>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- ACTION CARDS -->
+
+    <div class="premium-actions-grid">
+
+        {% set actions = [
+
+            ('/search-flights', '✈', 'Search Flights',
+            'Find and book flights across destinations.', ''),
+
+            ('/my-bookings', '🎫', 'My Bookings',
+            'View your booked flights and ticket details.', ''),
+
+            ('/edit-profile', '✏', 'Edit Profile',
+            'Update your personal account information.', ''),
+
+            ('/logout', '↩', 'Logout',
+            'Securely logout from your account.', 'logout-card')
+
+        ] %}
+
+        {% for link, icon, title, text, extra_class in actions %}
+
+        <a href="{{ link }}"
+           class="premium-action-link">
+
+            <div class="premium-action-card {{ extra_class }}">
+
+                <div class="premium-action-icon">
+
+                    {{ icon }}
+
+                </div>
+
+                <div>
+
+                    <h2>{{ title }}</h2>
+
+                    <p>{{ text }}</p>
+
+                </div>
+
+            </div>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+
+    <!-- RECENT BOOKINGS -->
+
+    <div class="premium-bookings-section">
+
+        <div class="premium-booking-header">
+
+            <h2>Your Recent Bookings</h2>
+
+        </div>
+
+
+        <div class="premium-bookings-list">
+
+            {% if bookings %}
+
+                {% for booking in bookings %}
+
+                <div class="premium-booking-card">
+
+
+                    <div class="premium-airline-name">
+
+                        {{ booking.airline_name }}
+
+                    </div>
+
+
+                    <div class="premium-booking-detail">
+
+                        <span>Route</span>
+
+                        <h3>
+
+                            {{ booking.source }}
+                            →
+                            {{ booking.destination }}
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="premium-booking-detail">
+
+                        <span>Seat</span>
+
+                        <h3>{{ booking.seat_number }}</h3>
+
+                    </div>
+
+
+                    <div class="premium-booking-detail">
+
+                        <span>Status</span>
+
+                        <h3 class="booking-confirmed">
+
+                            {{ booking.booking_status }}
+
+                        </h3>
+
+                    </div>
+
+
+                    <div>
+
+                        <a href="/ticket/{{ booking.reservation_id }}">
+
+                            <button class="premium-ticket-btn">
+
+                                View Ticket
+
+                            </button>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="no-bookings-box">
+
+                    No bookings available yet.
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

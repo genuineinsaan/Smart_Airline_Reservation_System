@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Book Flight</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="booking-page">
+
+    <div class="booking-card-modern">
+
+
+        <!-- TOP SECTION -->
+
+        <div class="booking-top-section">
+
+            <div>
+
+                <h1>{{ flight.airline_name }}</h1>
+
+                <p class="booking-route">
+
+                    {{ flight.source }} → {{ flight.destination }}
+
+                </p>
+
+            </div>
+
+            <div class="ticket-price-box">
+
+                Starting From ₹{{ flight.ticket_price }}
+
+            </div>
+
+        </div>
+
+
+        <!-- AI INSIGHTS -->
+
+        <div class="flight-ai-section">
+
+            <div class="flight-ai-badge ai-delay">
+
+                {{ flight.delay_prediction }}
+
+            </div>
+
+            <div class="flight-ai-badge ai-weather">
+
+                {{ flight.weather_status }}
+
+            </div>
+
+            {% if flight.ticket_price < 4000 %}
+
+            <div class="flight-ai-badge ai-budget">
+
+                Budget Flight
+
+            </div>
+
+            {% elif flight.ticket_price < 8000 %}
+
+            <div class="flight-ai-badge ai-standard">
+
+                Standard Pricing
+
+            </div>
+
+            {% else %}
+
+            <div class="flight-ai-badge ai-premium">
+
+                Premium Pricing
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- FLIGHT DETAILS -->
+
+        <div class="booking-details-grid">
+
+            <div class="booking-info-box">
+
+                <span>Available Day</span>
+
+                <p>{{ flight.available_day }}</p>
+
+            </div>
+
+            <div class="booking-info-box">
+
+                <span>Departure</span>
+
+                <p>{{ flight.departure_time }}</p>
+
+            </div>
+
+            <div class="booking-info-box">
+
+                <span>Arrival</span>
+
+                <p>{{ flight.arrival_time }}</p>
+
+            </div>
+
+            <div class="booking-info-box">
+
+                <span>Duration</span>
+
+                <p>{{ flight.duration }}</p>
+
+            </div>
+
+            <div class="booking-info-box">
+
+                <span>Stops</span>
+
+                <p>{{ flight.stops }}</p>
+
+            </div>
+
+            <div class="booking-info-box">
+
+                <span>Seats Available</span>
+
+                <p>{{ flight.available_seats }}</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING FORM -->
+
+        <form method="POST">
+
+
+            <!-- SEAT TITLE -->
+
+            <div class="seat-title-section">
+
+                <h2>Select Your Seat</h2>
+
+                <p>
+
+                    Premium seats cost higher than economy seats.
+
+                </p>
+
+            </div>
+
+
+            <!-- SEAT MAP -->
+
+            <div class="modern-seat-layout">
+
+                {% set seat_rows = {
+
+                    'A': 'premium-seat',
+                    'B': 'business-seat',
+                    'C': 'standard-seat',
+                    'D': 'saver-seat',
+                    'E': 'economy-seat'
+
+                } %}
+
+                {% for row, seat_class in seat_rows.items() %}
+
+                    {% for num in range(1, 4) %}
+
+                        {% set seat = row ~ num %}
+
+                        <label class="seat-card {{ seat_class }}">
+
+                            <input type="radio"
+                                   name="seat_number"
+                                   value="{{ seat }}"
+                                   {% if seat == 'A1' %}required{% endif %}
+                                   {% if seat in booked_seats %}disabled{% endif %}>
+
+                            <span
+                                {% if seat in booked_seats %}
+                                class="seat-booked"
+                                {% endif %}
+                            >
+
+                                {{ seat }}
+
+                                <small>
+
+                                    ₹{{ seat_prices[row] }}
+
+                                </small>
+
+                            </span>
+
+                        </label>
+
+                    {% endfor %}
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- SEAT LEGEND -->
+
+            <div class="seat-legend">
+
+                <div class="legend-item">
+
+                    <div class="legend-color premium-legend"></div>
+
+                    <span>Premium Class</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="legend-color business-legend"></div>
+
+                    <span>Business Class</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="legend-color standard-legend"></div>
+
+                    <span>Standard Class</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="legend-color saver-legend"></div>
+
+                    <span>Saver Class</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="legend-color economy-legend"></div>
+
+                    <span>Economy Class</span>
+
+                </div>
+
+                <div class="legend-item">
+
+                    <div class="legend-color booked-legend"></div>
+
+                    <span>Booked Seat</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="confirm-booking-btn">
+
+                Confirm Booking
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

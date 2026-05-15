@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0">
+
+    <title>View Reservations</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for(
+          'static',
+          filename='css/style.css'
+          ) }}">
+
+</head>
+
+<body>
+
+<div class="reservation-page">
+
+
+    <!-- HEADER -->
+
+    <div class="reservation-header">
+
+        <h1>All Reservations</h1>
+
+        <p>
+            Monitor all passenger bookings
+            and payment details.
+        </p>
+
+    </div>
+
+
+    <!-- TABLE BOX -->
+
+    <div class="reservation-table-box">
+
+        <table class="reservation-table">
+
+
+            <!-- TABLE HEAD -->
+
+            <thead>
+
+                <tr>
+
+                    {% for heading in [
+
+                        'ID',
+                        'Passenger',
+                        'Airline',
+                        'Route',
+                        'Seat',
+                        'Price',
+                        'Payment',
+                        'Status'
+
+                    ] %}
+
+                    <th>{{ heading }}</th>
+
+                    {% endfor %}
+
+                </tr>
+
+            </thead>
+
+
+            <!-- TABLE BODY -->
+
+            <tbody>
+
+                {% for reservation in reservations %}
+
+                <tr>
+
+                    {% set reservation_data = [
+
+                        '#' ~ reservation.reservation_id,
+
+                        reservation.passenger_name,
+
+                        reservation.airline_name,
+
+                        reservation.source ~
+                        ' → ' ~
+                        reservation.destination,
+
+                        reservation.seat_number,
+
+                        '₹' ~ reservation.final_ticket_price,
+
+                        reservation.payment_method
+
+                    ] %}
+
+
+                    {% for data in reservation_data %}
+
+                    <td>{{ data }}</td>
+
+                    {% endfor %}
+
+
+                    <td>
+
+                        <span class="reservation-status">
+
+                            {{ reservation.booking_status }}
+
+                        </span>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

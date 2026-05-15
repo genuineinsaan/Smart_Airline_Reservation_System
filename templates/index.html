@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Airline Reservation System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        ✈ Airline Reservation System
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="/">Home Page</a>
+        </li>
+
+        {% if 'user_id' in session %}
+
+            {% set nav_links = [
+
+                ('/dashboard', 'User Dashboard'),
+                ('/logout', 'Logout')
+
+            ] %}
+
+        {% else %}
+
+            {% set nav_links = [
+
+                ('/login', 'Sign In'),
+                ('/register', 'Sign Up'),
+                ('/admin-login', 'Admin Dashboard')
+
+            ] %}
+
+        {% endif %}
+
+
+        {% for link, text in nav_links %}
+
+        <li>
+
+            <a href="{{ link }}">
+
+                {{ text }}
+
+            </a>
+
+        </li>
+
+        {% endfor %}
+
+    </ul>
+
+</nav>
+
+
+<!-- SLIDER SECTION -->
+
+<section class="slider-section">
+
+
+    <!-- HERO TEXT -->
+
+    <div class="hero-overlay">
+
+        <h1>
+
+            Fly Smarter With Airline Reservation System
+
+        </h1>
+
+        <p>
+
+            Book flights, explore destinations,
+            and travel with confidence.
+
+        </p>
+
+    </div>
+
+
+    <!-- IMAGE SLIDER -->
+
+    <div class="slider-container">
+
+        <div class="slider-track">
+
+            {% for img in range(1, 6) %}
+
+            <img src="{{ url_for(
+                'static',
+                filename='images/' ~ img ~ '.jpg'
+            ) }}">
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+    <!-- BUTTON -->
+
+    <div class="floating-button">
+
+        <a href="/search-flights">
+
+            <button class="start-btn">
+
+                Get Started
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- TRENDING OFFERS -->
+
+<section class="offers-section">
+
+    <h2>Trending Offers</h2>
+
+    <div class="offers-container">
+
+        {% set offers = [
+
+            ('15% OFF',
+            'Get 15% off on your first flight booking.',
+            'Use Code: FIRST15'),
+
+            ('₹200 OFF',
+            'Get ₹200 off on bookings above ₹1999.',
+            'Use Code: SAVE200'),
+
+            ('₹500 OFF',
+            'Enjoy discounts on round trip flights.',
+            'Limited Time Offer')
+
+        ] %}
+
+
+        {% for title, text, code in offers %}
+
+        <div class="offer-card">
+
+            <h3>{{ title }}</h3>
+
+            <p>{{ text }}</p>
+
+            <span>{{ code }}</span>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- TRENDING FLIGHTS -->
+
+<section class="trending-section">
+
+    <h2>Trending Flights</h2>
+
+    <div class="trending-container">
+
+        {% set flights = [
+
+            ('Delhi → Mumbai', 'Starting from ₹5200'),
+
+            ('Kolkata → Bangalore',
+            'Starting from ₹6700'),
+
+            ('Chennai → Hyderabad',
+            'Starting from ₹4100')
+
+        ] %}
+
+
+        {% for route, price in flights %}
+
+        <div class="trend-card">
+
+            <h3>{{ route }}</h3>
+
+            <p>{{ price }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+
+<!-- PREMIUM SECTION -->
+
+<section class="premium-section">
+
+    <h2>Experience More With Us</h2>
+
+    <div class="premium-container">
+
+        {% set premium_features = [
+
+            ('Premium Class',
+            'Enjoy luxury seating and premium comfort during your journey.'),
+
+            ('Premium Facilities',
+            'Experience high-quality meals, entertainment, and onboard services.'),
+
+            ('24/7 Support',
+            'Our support team is always available to assist your travel needs.')
+
+        ] %}
+
+
+        {% for title, text in premium_features %}
+
+        <div class="premium-card">
+
+            <h3>{{ title }}</h3>
+
+            <p>{{ text }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+</body>
+
+</html>

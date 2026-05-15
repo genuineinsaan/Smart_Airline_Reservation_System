@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="edit-profile-page">
+
+
+    <!-- HEADER -->
+
+    <div class="edit-profile-header">
+
+        <h1>Edit Your Profile</h1>
+
+        <p>
+
+            Update your account information securely.
+
+        </p>
+
+    </div>
+
+
+    <!-- FORM CARD -->
+
+    <div class="edit-profile-card">
+
+        <form method="POST">
+
+
+            {% set fields = [
+
+                ('First Name', 'text', 'first_name',
+                user.first_name, ''),
+
+                ('Last Name', 'text', 'last_name',
+                user.last_name, ''),
+
+                ('Email Address', 'email', 'email',
+                user.email, ''),
+
+                ('Phone Number', 'text', 'phone',
+                user.phone, ''),
+
+                ('Country', 'text', 'country',
+                user.country, ''),
+
+                ('New Password', 'password', 'password',
+                '', 'Enter new password')
+
+            ] %}
+
+
+            {% for label, type, name, value, placeholder in fields %}
+
+            <div class="edit-input-group">
+
+                <label>{{ label }}</label>
+
+                <input type="{{ type }}"
+                       name="{{ name }}"
+                       value="{{ value }}"
+                       placeholder="{{ placeholder }}"
+                       {% if name != 'password' %}
+                       required
+                       {% endif %}>
+
+            </div>
+
+            {% endfor %}
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="save-profile-btn">
+
+                Save Changes
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

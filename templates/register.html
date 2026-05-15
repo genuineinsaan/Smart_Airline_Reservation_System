@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Create Your Account</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="modern-register-page">
+
+    <div class="modern-register-card">
+
+
+        <!-- HEADER -->
+
+        <div class="modern-register-header">
+
+            <h1>Create Your Account</h1>
+
+            <p>
+                Join the Airline Reservation System
+                and start your journey.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST"
+              enctype="multipart/form-data"
+              class="modern-register-form">
+
+
+            <!-- NAME GRID -->
+
+            <div class="modern-name-grid">
+
+                {% set name_fields = [
+
+                    ('First Name',
+                    'first_name',
+                    'First Name',
+                    true),
+
+                    ('Middle Name',
+                    'middle_name',
+                    'Middle Name',
+                    false),
+
+                    ('Last Name',
+                    'last_name',
+                    'Last Name',
+                    true)
+
+                ] %}
+
+
+                {% for label, name,
+                placeholder, required
+                in name_fields %}
+
+                <div class="modern-input-box">
+
+                    <label>{{ label }}</label>
+
+                    <input type="text"
+                           name="{{ name }}"
+                           placeholder="{{ placeholder }}"
+                           {% if required %}
+                           required
+                           {% endif %}>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- REGISTER GRID -->
+
+            <div class="modern-register-grid">
+
+
+                {% set input_fields = [
+
+                    ('Email Address',
+                    'email',
+                    'email',
+                    'Enter Email'),
+
+                    ('Phone Number',
+                    'text',
+                    'phone',
+                    'Enter Phone Number'),
+
+                    ('Create Password',
+                    'password',
+                    'password',
+                    'Create Password'),
+
+                    ('Re-enter Password',
+                    'password',
+                    'confirm_password',
+                    'Re-enter Password')
+
+                ] %}
+
+
+                {% for label, type,
+                name, placeholder
+                in input_fields %}
+
+                <div class="modern-input-box">
+
+                    <label>{{ label }}</label>
+
+                    <input type="{{ type }}"
+                           name="{{ name }}"
+                           placeholder="{{ placeholder }}"
+                           required>
+
+                </div>
+
+                {% endfor %}
+
+
+                <!-- GENDER -->
+
+                <div class="modern-input-box">
+
+                    <label>Gender</label>
+
+                    <select name="gender"
+                            required>
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        {% for gender in [
+
+                            'Male',
+                            'Female',
+                            'Other'
+
+                        ] %}
+
+                        <option value="{{ gender }}">
+
+                            {{ gender }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+
+                <!-- DOB -->
+
+                <div class="modern-input-box">
+
+                    <label>Date of Birth</label>
+
+                    <input type="date"
+                           name="dob"
+                           required>
+
+                </div>
+
+
+                <!-- COUNTRY -->
+
+                <div class="modern-input-box">
+
+                    <label>Country</label>
+
+                    <select name="country"
+                            required>
+
+                        <option value="">
+                            Select Country
+                        </option>
+
+                        {% for country in [
+
+                            'India',
+                            'USA',
+                            'UK',
+                            'Canada',
+                            'Australia'
+
+                        ] %}
+
+                        <option value="{{ country }}">
+
+                            {{ country }}
+
+                        </option>
+
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADDRESS -->
+
+            <div class="modern-input-box">
+
+                <label>Address</label>
+
+                <textarea name="address"
+                          rows="4"
+                          placeholder="Enter Address"></textarea>
+
+            </div>
+
+
+            <!-- PROFILE IMAGE -->
+
+            <div class="modern-input-box">
+
+                <label>
+                    Upload Profile Image (Optional)
+                </label>
+
+                <input type="file"
+                       name="profile_image">
+
+            </div>
+
+
+            <!-- CAPTCHA -->
+
+            <div class="modern-captcha-wrapper">
+
+                <label>Security Verification</label>
+
+                <div class="captcha-box">
+
+                    <span id="captchaText">
+
+                        FLY123
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAPTCHA INPUT -->
+
+            <div class="modern-input-box">
+
+                <input type="text"
+                       name="captcha"
+                       placeholder="Enter CAPTCHA"
+                       required>
+
+            </div>
+
+
+            <!-- TERMS -->
+
+            <div class="modern-terms-box">
+
+                <input type="checkbox"
+                       required>
+
+                <label>
+
+                    I agree to the Terms & Conditions
+
+                </label>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="modern-register-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+
+        <!-- SIGN IN -->
+
+        <div class="modern-signin-link">
+
+            <p>
+
+                Already Registered?
+
+                <a href="/login">
+
+                    Sign In
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CAPTCHA SCRIPT -->
+
+<script>
+
+    const captchaList = [
+
+        "FLY123",
+        "JET909",
+        "AIR202",
+        "SKY555",
+        "TRIP321",
+        "SAFE777"
+
+    ];
+
+
+    const randomCaptcha = captchaList[
+
+        Math.floor(
+            Math.random() * captchaList.length
+        )
+
+    ];
+
+
+    document.getElementById('captchaText')
+            .innerText = randomCaptcha;
+
+</script>
+
+</body>
+
+</html>

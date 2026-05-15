@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0">
+
+    <title>Smart Flight Insights</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for(
+          'static',
+          filename='css/style.css'
+          ) }}">
+
+</head>
+
+<body>
+
+<div class="insights-page">
+
+
+    <!-- HEADER -->
+
+    <div class="insights-header">
+
+        <h1>Smart Flight Insights</h1>
+
+        <p>
+
+            AI-powered route analytics,
+            flight monitoring, and
+            ML prediction dashboard.
+
+        </p>
+
+    </div>
+
+
+    <!-- ROUTE FORM -->
+
+    <div class="route-analysis-box">
+
+        <form method="POST"
+              class="route-analysis-form">
+
+
+            {% set cities = [] %}
+
+            {% for route in routes %}
+
+                {% if route.source not in cities %}
+
+                    {% set _ = cities.append(route.source) %}
+
+                {% endif %}
+
+            {% endfor %}
+
+
+            <!-- SOURCE -->
+
+            <div class="route-input">
+
+                <label>Source</label>
+
+                <select name="source"
+                        required>
+
+                    <option value="">
+                        Select Source
+                    </option>
+
+                    {% for city in cities %}
+
+                    <option value="{{ city }}">
+
+                        {{ city }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- DESTINATION -->
+
+            <div class="route-input">
+
+                <label>Destination</label>
+
+                <select name="destination"
+                        required>
+
+                    <option value="">
+                        Select Destination
+                    </option>
+
+                    {% for route in routes %}
+
+                    <option value="{{ route.destination }}">
+
+                        {{ route.destination }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="route-analysis-btn">
+
+                Analyze Route
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    {% if summary %}
+
+    <div class="summary-grid">
+
+        {% set summary_cards = [
+
+            (summary.total_flights,
+            'Total Flights'),
+
+            ('₹' ~ summary.avg_price,
+            'Average Ticket Price'),
+
+            (summary.source ~ ' → ' ~ summary.destination,
+            'Selected Route')
+
+        ] %}
+
+
+        {% for value, title in summary_cards %}
+
+        <div class="summary-card">
+
+            <h2>{{ value }}</h2>
+
+            <p>{{ title }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- ML GRAPHS -->
+
+    {% if flights %}
+
+    <div class="graph-container">
+
+
+        <div class="graph-box">
+
+            <h2>Ticket Price Analysis</h2>
+
+            <canvas id="priceChart"></canvas>
+
+        </div>
+
+
+        <div class="graph-box">
+
+            <h2>Delay Prediction Analysis</h2>
+
+            <canvas id="delayChart"></canvas>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- FLIGHT CARDS -->
+
+    {% if flights %}
+
+    <div class="insights-grid">
+
+        {% for flight in flights %}
+
+        <div class="insight-card">
+
+
+            <!-- TOP -->
+
+            <div class="insight-top">
+
+                <h2>{{ flight.airline_name }}</h2>
+
+                <span>
+
+                    {{ flight.source }}
+                    →
+                    {{ flight.destination }}
+
+                </span>
+
+            </div>
+
+
+            <!-- PRICE -->
+
+            <div class="insight-price">
+
+                ₹{{ flight.ticket_price }}
+
+            </div>
+
+
+            <!-- BADGES -->
+
+            <div class="insight-badges">
+
+                <div class="insight-badge delay-badge">
+
+                    {{ flight.delay_prediction }}
+
+                </div>
+
+                <div class="insight-badge weather-badge">
+
+                    {{ flight.weather_status }}
+
+                </div>
+
+
+                {% if flight.ticket_price < 5000 %}
+
+                <div class="insight-badge budget-badge">
+
+                    Budget Flight
+
+                </div>
+
+                {% elif flight.ticket_price < 10000 %}
+
+                <div class="insight-badge standard-badge">
+
+                    Standard Pricing
+
+                </div>
+
+                {% else %}
+
+                <div class="insight-badge premium-badge">
+
+                    Premium Pricing
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- AI INFO -->
+
+            <div class="insight-recommendation">
+
+                ✨ AI Route Analysis:
+                Optimized route for
+                airline passengers.
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+<!-- CHART JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+{% if flights %}
+
+
+// AIRLINE LABELS
+
+const airlineLabels = [
+
+    {% for flight in flights %}
+
+        "{{ flight.airline_name }}"
+        {% if not loop.last %},{% endif %}
+
+    {% endfor %}
+
+];
+
+
+// PRICE DATA
+
+const ticketPrices = [
+
+    {% for flight in flights %}
+
+        {{ flight.ticket_price }}
+        {% if not loop.last %},{% endif %}
+
+    {% endfor %}
+
+];
+
+
+// PRICE CHART
+
+new Chart(document.getElementById('priceChart'), {
+
+    type: 'bar',
+
+    data: {
+
+        labels: airlineLabels,
+
+        datasets: [{
+
+            label: 'Ticket Price',
+
+            data: ticketPrices,
+
+            backgroundColor: [
+
+                '#0b3d91',
+                '#2f67e3',
+                '#28a745',
+                '#ff9800',
+                '#dc3545'
+
+            ]
+
+        }]
+
+    }
+
+});
+
+
+// DELAY VALUES
+
+const delayValues = [
+
+    {% for flight in flights %}
+
+        {% if "High" in flight.delay_prediction %}
+
+            3
+
+        {% elif "Moderate" in flight.delay_prediction %}
+
+            2
+
+        {% else %}
+
+            1
+
+        {% endif %}
+
+        {% if not loop.last %},{% endif %}
+
+    {% endfor %}
+
+];
+
+
+// DELAY CHART
+
+new Chart(document.getElementById('delayChart'), {
+
+    type: 'line',
+
+    data: {
+
+        labels: airlineLabels,
+
+        datasets: [{
+
+            label: 'Delay Risk',
+
+            data: delayValues,
+
+            borderColor: '#dc3545',
+
+            backgroundColor: '#ffcdd2',
+
+            tension: 0.4,
+
+            fill: true
+
+        }]
+
+    }
+
+});
+
+{% endif %}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cancel Ticket</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="cancel-page-wrapper">
+
+    <div class="cancel-card-modern">
+
+
+        <!-- HEADER -->
+
+        <div class="cancel-header">
+
+            <h1>Cancel Your Ticket</h1>
+
+            <p>
+                20% cancellation fee will be deducted.
+            </p>
+
+        </div>
+
+
+        <!-- FLIGHT CARD -->
+
+        <div class="cancel-flight-card">
+
+            <div class="cancel-airline-top">
+
+                <h2>{{ booking.airline_name }}</h2>
+
+                <span>
+
+                    {{ booking.source }}
+                    →
+                    {{ booking.destination }}
+
+                </span>
+
+            </div>
+
+
+            <div class="cancel-ticket-grid">
+
+                <div class="cancel-info-box">
+
+                    <label>Seat Number</label>
+
+                    <p>{{ booking.seat_number }}</p>
+
+                </div>
+
+                <div class="cancel-info-box">
+
+                    <label>Ticket Price</label>
+
+                    <p>₹{{ booking.final_ticket_price }}</p>
+
+                </div>
+
+                <div class="cancel-info-box">
+
+                    <label>Cancellation Fee</label>
+
+                    <p class="cancel-fee-text">
+
+                        ₹{{ cancellation_fee }}
+
+                    </p>
+
+                </div>
+
+                <div class="cancel-info-box">
+
+                    <label>Refund Amount</label>
+
+                    <p class="refund-text">
+
+                        ₹{{ refund_amount }}
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST">
+
+
+            <!-- DROPDOWN -->
+
+            <div class="cancel-select-box">
+
+                <label>Select Cancellation Reason</label>
+
+                <select name="cancel_reason"
+                        id="cancel_reason"
+                        required>
+
+                    <option value="">
+                        Choose Reason
+                    </option>
+
+                    {% set reasons = [
+
+                        'Change Of Plans',
+                        'Medical Emergency',
+                        'Found Better Flight',
+                        'Personal Reason',
+                        'Other'
+
+                    ] %}
+
+                    {% for reason in reasons %}
+
+                    <option value="{{ reason }}">
+
+                        {{ reason }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- OTHER REASON -->
+
+            <div class="other-reason-box"
+                 id="other_reason_box">
+
+                <label>Enter Your Reason</label>
+
+                <textarea name="other_reason"
+                          placeholder="Enter detailed reason..."></textarea>
+
+            </div>
+
+
+            <!-- WARNING -->
+
+            <div class="cancel-warning-modern">
+
+                This cancellation cannot be undone
+                after confirmation.
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="confirm-cancel-modern-btn">
+
+                Confirm Cancellation
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const reasonDropdown =
+        document.getElementById('cancel_reason');
+
+    const otherReasonBox =
+        document.getElementById('other_reason_box');
+
+
+    reasonDropdown.addEventListener('change', () => {
+
+        otherReasonBox.style.display =
+
+            reasonDropdown.value === "Other"
+            ? "block"
+            : "none";
+
+    });
+
+</script>
+
+</body>
+
+</html>

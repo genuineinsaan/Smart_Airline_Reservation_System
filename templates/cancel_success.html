@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Cancellation Successful</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="cancel-success-page">
+
+    <div class="cancel-success-card">
+
+
+        <!-- ICON -->
+
+        <div class="cancel-success-icon">✓</div>
+
+
+        <!-- TITLE -->
+
+        <h1>Ticket Cancelled Successfully</h1>
+
+        <p class="cancel-success-subtitle">
+
+            Your booking has been cancelled successfully.
+
+        </p>
+
+
+        <!-- REFUND SECTION -->
+
+        <div class="refund-summary-grid">
+
+            <div class="refund-summary-box fee-box">
+
+                <span>Cancellation Fee</span>
+
+                <h2>₹{{ cancellation_fee }}</h2>
+
+            </div>
+
+            <div class="refund-summary-box refund-box">
+
+                <span>Refund Amount</span>
+
+                <h2>₹{{ refund_amount }}</h2>
+
+            </div>
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="refund-message-box">
+
+            Refund will be processed within
+            3-5 business days.
+
+        </div>
+
+
+        <!-- BUTTONS -->
+
+        <div class="cancel-success-buttons">
+
+            <a href="/my-bookings">
+
+                <button class="back-bookings-btn">
+
+                    My Bookings
+
+                </button>
+
+            </a>
+
+            <a href="/dashboard">
+
+                <button class="dashboard-btn">
+
+                    Dashboard
+
+                </button>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

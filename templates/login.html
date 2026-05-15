@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="modern-login-page">
+
+    <div class="modern-login-card">
+
+
+        <!-- HEADER -->
+
+        <div class="modern-login-header">
+
+            <h1>Welcome Back</h1>
+
+            <p>
+
+                Sign in to continue your airline journey.
+
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST"
+              class="modern-login-form">
+
+
+            {% set fields = [
+
+                ('Email Address', 'email',
+                'email', 'Enter Email'),
+
+                ('Password', 'password',
+                'password', 'Enter Password')
+
+            ] %}
+
+
+            {% for label, type, name, placeholder in fields %}
+
+            <div class="modern-input-box">
+
+                <label>{{ label }}</label>
+
+                <input type="{{ type }}"
+                       name="{{ name }}"
+                       placeholder="{{ placeholder }}"
+                       required>
+
+            </div>
+
+            {% endfor %}
+
+
+            <!-- CAPTCHA -->
+
+            <div class="modern-captcha-section">
+
+                <label>Security Verification</label>
+
+                <div class="captcha-box">
+
+                    <span id="captcha-text"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- HIDDEN CAPTCHA -->
+
+            <input type="hidden"
+                   name="actual_captcha"
+                   id="actual_captcha">
+
+
+            <!-- USER CAPTCHA -->
+
+            <div class="modern-input-box">
+
+                <input type="text"
+                       name="captcha"
+                       placeholder="Enter CAPTCHA"
+                       required>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="modern-login-btn">
+
+                Sign In
+
+            </button>
+
+        </form>
+
+
+        <!-- REGISTER LINK -->
+
+        <div class="modern-register-link">
+
+            <p>Not yet registered?</p>
+
+            <a href="/register">
+
+                Sign Up Now
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CAPTCHA SCRIPT -->
+
+<script>
+
+    const captchaList = [
+
+        "FLY123",
+        "AIR999",
+        "JET456",
+        "SKY777",
+        "TRIP321",
+        "GOAIR11"
+
+    ];
+
+
+    const randomCaptcha = captchaList[
+
+        Math.floor(
+            Math.random() * captchaList.length
+        )
+
+    ];
+
+
+    document.getElementById("captcha-text")
+        .innerText = randomCaptcha;
+
+    document.getElementById("actual_captcha")
+        .value = randomCaptcha;
+
+</script>
+
+</body>
+
+</html>

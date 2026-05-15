@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="admin-dashboard-page">
+
+
+    <!-- HEADER -->
+
+    <div class="admin-dashboard-header">
+
+        <h1>Admin Dashboard</h1>
+
+        <p>
+            Manage flights, users,
+            reservations, and AI systems.
+        </p>
+
+    </div>
+
+
+    <!-- GRID -->
+
+    <div class="admin-dashboard-grid">
+
+
+        <!-- MANAGE FLIGHTS -->
+
+        <a href="/manage-flights"
+           class="admin-dashboard-card">
+
+            <div class="admin-card-icon">✈️</div>
+
+            <h2>Manage Flights</h2>
+
+            <p>
+                Add, update, and manage
+                airline flight schedules.
+            </p>
+
+        </a>
+
+
+        <!-- VIEW RESERVATIONS -->
+
+        <a href="/view-reservations"
+           class="admin-dashboard-card">
+
+            <div class="admin-card-icon">🎫</div>
+
+            <h2>View Reservations</h2>
+
+            <p>
+                Check all passenger
+                booking details.
+            </p>
+
+        </a>
+
+
+        <!-- MANAGE USERS -->
+
+        <a href="/manage-users"
+           class="admin-dashboard-card">
+
+            <div class="admin-card-icon">👥</div>
+
+            <h2>Manage Users</h2>
+
+            <p>
+                View and manage
+                registered users.
+            </p>
+
+        </a>
+
+
+        <!-- SMART FLIGHT INSIGHTS -->
+
+        <a href="/smart-flight-insights"
+           class="admin-dashboard-card">
+
+            <div class="admin-card-icon">🤖</div>
+
+            <h2>Smart Flight Insights</h2>
+
+            <p>
+                View AI-powered flight analytics,
+                demand prediction, and delay insights.
+            </p>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

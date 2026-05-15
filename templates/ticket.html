@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Ticket</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="professional-ticket-page">
+
+    <div class="professional-ticket-card">
+
+
+        <!-- HEADER -->
+
+        <div class="ticket-main-header">
+
+            <h1>Your Ticket</h1>
+
+            <p>
+
+                Airline Reservation System
+
+            </p>
+
+        </div>
+
+
+        <!-- AIRLINE SECTION -->
+
+        <div class="ticket-airline-section">
+
+            <div>
+
+                <h2>{{ booking.airline_name }}</h2>
+
+                <span>
+
+                    {{ booking.source }}
+                    →
+                    {{ booking.destination }}
+
+                </span>
+
+            </div>
+
+            <div class="ticket-price-tag">
+
+                ₹{{ booking.final_ticket_price }}
+
+            </div>
+
+        </div>
+
+
+        <!-- USER ID -->
+
+        <div class="ticket-user-id-box">
+
+            <span>Airline Customer ID</span>
+
+            <h2>{{ booking.unique_user_id }}</h2>
+
+        </div>
+
+
+        <!-- PASSENGER SECTION -->
+
+        <div class="ticket-passenger-section">
+
+            {% set passenger_details = [
+
+                ('Passenger Name',
+                booking.full_name),
+
+                ('Seat Number',
+                booking.seat_number)
+
+            ] %}
+
+
+            {% for label, value in passenger_details %}
+
+            <div class="ticket-detail-box">
+
+                <label>{{ label }}</label>
+
+                <p>{{ value }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- FLIGHT DETAILS -->
+
+        <div class="ticket-details-grid">
+
+            {% set flight_details = [
+
+                ('Departure Time',
+                booking.departure_time,
+                ''),
+
+                ('Arrival Time',
+                booking.arrival_time,
+                ''),
+
+                ('Booking Status',
+                booking.booking_status,
+                'confirmed-status'),
+
+                ('Ticket ID',
+                '#' ~ booking.reservation_id,
+                '')
+
+            ] %}
+
+
+            {% for label, value, class_name
+            in flight_details %}
+
+            <div class="ticket-detail-box">
+
+                <label>{{ label }}</label>
+
+                <p class="{{ class_name }}">
+
+                    {{ value }}
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- ACTION BUTTONS -->
+
+        <div class="ticket-action-buttons">
+
+            {% set buttons = [
+
+                ('/cancel-ticket/' ~ booking.reservation_id,
+                'ticket-cancel-btn',
+                'Cancel Ticket'),
+
+                ('/dashboard',
+                'ticket-done-btn',
+                'Done')
+
+            ] %}
+
+
+            {% for link, class_name, text
+            in buttons %}
+
+            <a href="{{ link }}">
+
+                <button class="{{ class_name }}">
+
+                    {{ text }}
+
+                </button>
+
+            </a>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="ticket-footer-section">
+
+            Thank you for choosing
+            Airline Reservation System.
+            Have a safe journey.
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    window.onload = function(){
+
+        window.open(
+
+            "/download-ticket/{{ booking.reservation_id }}",
+
+            "_blank"
+
+        );
+
+    };
+
+</script>
+
+</body>
+
+</html>

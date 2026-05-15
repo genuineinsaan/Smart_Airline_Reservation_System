@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="modern-login-page">
+
+    <div class="modern-login-card">
+
+
+        <!-- ICON -->
+
+        <div class="modern-login-icon">👨‍💼</div>
+
+
+        <!-- TITLE -->
+
+        <h1>Admin Login</h1>
+
+        <p>
+            Access the airline management
+            dashboard securely.
+        </p>
+
+
+        <!-- FORM -->
+
+        <form method="POST">
+
+
+            <!-- USERNAME -->
+
+            <div class="modern-login-input">
+
+                <label>Admin Username</label>
+
+                <input type="text"
+                       name="username"
+                       placeholder="Enter Username"
+                       required>
+
+            </div>
+
+
+            <!-- PASSWORD -->
+
+            <div class="modern-login-input">
+
+                <label>Password</label>
+
+                <input type="password"
+                       name="password"
+                       placeholder="Enter Password"
+                       required>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="modern-login-btn">
+
+                Login
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

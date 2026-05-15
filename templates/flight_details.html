@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Details</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="flight-details-page">
+
+    <div class="flight-details-card">
+
+
+        <!-- TOP SECTION -->
+
+        <div class="flight-details-top">
+
+            <div>
+
+                <h1>{{ flight.airline_name }}</h1>
+
+                <p class="flight-route">
+
+                    {{ flight.source }} → {{ flight.destination }}
+
+                </p>
+
+            </div>
+
+            <div class="flight-price-box">
+
+                ₹{{ flight.ticket_price }}
+
+            </div>
+
+        </div>
+
+
+        <!-- AI INSIGHTS -->
+
+        <div class="flight-ai-section">
+
+            <div class="flight-ai-badge ai-delay">
+
+                {{ flight.delay_prediction }}
+
+            </div>
+
+            <div class="flight-ai-badge ai-weather">
+
+                {{ flight.weather_status }}
+
+            </div>
+
+
+            {% if flight.ticket_price < 4000 %}
+
+            <div class="flight-ai-badge ai-budget">
+
+                Budget Flight
+
+            </div>
+
+            {% elif flight.ticket_price < 8000 %}
+
+            <div class="flight-ai-badge ai-standard">
+
+                Standard Pricing
+
+            </div>
+
+            {% else %}
+
+            <div class="flight-ai-badge ai-premium">
+
+                Premium Pricing
+
+            </div>
+
+            {% endif %}
+
+
+            {% if flight.stops == 0 %}
+
+            <div class="flight-ai-badge ai-business">
+
+                Recommended for Business Travel
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- DETAILS GRID -->
+
+        <div class="flight-details-grid">
+
+            {% set details = [
+
+                ('Departure', flight.departure_time),
+                ('Arrival', flight.arrival_time),
+                ('Duration', flight.duration),
+                ('Stops', flight.stops),
+                ('Seats Available', flight.available_seats),
+                ('Weather Status', flight.weather_status),
+                ('Delay Prediction', flight.delay_prediction)
+
+            ] %}
+
+            {% for label, value in details %}
+
+            <div class="flight-info-box">
+
+                <span>{{ label }}</span>
+
+                <p>{{ value }}</p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <!-- SMART RECOMMENDATION -->
+
+        <div class="smart-flight-note">
+
+            ✈ AI Recommendation:
+            This flight is analyzed based on
+            weather conditions,
+            travel demand,
+            stop count,
+            and operational predictions.
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <a href="/book-flight/{{ flight.flight_id }}"
+           class="flight-book-link">
+
+            <button class="flight-book-btn">
+
+                Continue Booking
+
+            </button>
+
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

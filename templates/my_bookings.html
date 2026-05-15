@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Bookings</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="my-bookings-page">
+
+
+    <!-- HEADER -->
+
+    <div class="my-bookings-header">
+
+        <h1>My Bookings</h1>
+
+        <p>
+            View and manage all your
+            confirmed flight reservations.
+        </p>
+
+    </div>
+
+
+    <!-- BOOKINGS GRID -->
+
+    <div class="my-bookings-grid">
+
+
+        {% if bookings %}
+
+            {% for booking in bookings %}
+
+            <div class="modern-booking-card">
+
+
+                <!-- TOP -->
+
+                <div class="modern-booking-top">
+
+                    <div>
+
+                        <h2>{{ booking.airline_name }}</h2>
+
+                        <p class="modern-route">
+
+                            {{ booking.source }}
+                            →
+                            {{ booking.destination }}
+
+                        </p>
+
+                    </div>
+
+                    <div class="modern-booking-status">
+
+                        {{ booking.booking_status }}
+
+                    </div>
+
+                </div>
+
+
+                <!-- DETAILS -->
+
+                <div class="modern-booking-details">
+
+                    {% set details = [
+
+                        ('Seat Number',
+                        booking.seat_number),
+
+                        ('Booking ID',
+                        '#' ~ booking.reservation_id)
+
+                    ] %}
+
+
+                    {% for label, value in details %}
+
+                    <div class="modern-detail-box">
+
+                        <span>{{ label }}</span>
+
+                        <h3>{{ value }}</h3>
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+
+                <!-- BUTTONS -->
+
+                <div class="modern-booking-buttons">
+
+                    {% set buttons = [
+
+                        ('/ticket/' ~ booking.reservation_id,
+                        'modern-view-ticket-btn',
+                        'View Ticket'),
+
+                        ('/cancel-ticket/' ~ booking.reservation_id,
+                        'modern-cancel-ticket-btn',
+                        'Cancel Ticket')
+
+                    ] %}
+
+
+                    {% for link, class_name, text in buttons %}
+
+                    <a href="{{ link }}">
+
+                        <button class="{{ class_name }}">
+
+                            {{ text }}
+
+                        </button>
+
+                    </a>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="no-bookings-modern">
+
+                No bookings available yet.
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

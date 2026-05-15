@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Plan Your Trip</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="modern-trip-page">
+
+
+    <!-- HEADER -->
+
+    <div class="modern-trip-header">
+
+        <h1>Plan Your Trip</h1>
+
+        <p>
+            Search flights, compare routes,
+            and start your next journey.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH CARD -->
+
+    <div class="modern-trip-search-card">
+
+        <form method="POST"
+              class="modern-trip-form">
+
+
+            {% set cities = [
+
+                'Delhi',
+                'Mumbai',
+                'Kolkata',
+                'Chennai',
+                'Bangalore',
+                'Hyderabad'
+
+            ] %}
+
+
+            <!-- SOURCE -->
+
+            <div class="modern-trip-input">
+
+                <label>From</label>
+
+                <select name="source"
+                        id="source"
+                        required>
+
+                    <option value="">
+                        Select Source
+                    </option>
+
+                    {% for city in cities %}
+
+                    <option value="{{ city }}">
+
+                        {{ city }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- DESTINATION -->
+
+            <div class="modern-trip-input">
+
+                <label>To</label>
+
+                <select name="destination"
+                        id="destination"
+                        required>
+
+                    <option value="">
+                        Select Destination
+                    </option>
+
+                    {% for city in cities %}
+
+                    <option value="{{ city }}">
+
+                        {{ city }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="modern-trip-input">
+
+                <label>Departure Date</label>
+
+                <input type="date"
+                       name="departure_date"
+                       id="departure_date"
+                       required>
+
+            </div>
+
+
+            <!-- PRICE FILTER -->
+
+            <div class="modern-trip-input">
+
+                <label>Price Filter</label>
+
+                <select name="price_filter">
+
+                    <option value="">
+                        Select Price Range
+                    </option>
+
+                    <option value="low">
+                        Below ₹5000
+                    </option>
+
+                    <option value="medium">
+                        ₹5000 - ₹10000
+                    </option>
+
+                    <option value="high">
+                        Above ₹10000
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- STOPS FILTER -->
+
+            <div class="modern-trip-input">
+
+                <label>Stops Filter</label>
+
+                <select name="stops_filter">
+
+                    <option value="">
+                        Select Stops
+                    </option>
+
+                    <option value="0">
+                        Non Stop
+                    </option>
+
+                    <option value="1">
+                        1 Stop
+                    </option>
+
+                    <option value="2">
+                        2 Stops
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="modern-search-btn">
+
+                Search Flights
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- RESULTS -->
+
+    {% if flights %}
+
+    <div class="modern-flight-results">
+
+        {% for flight in flights %}
+
+        <div class="modern-flight-card">
+
+
+            <!-- TOP -->
+
+            <div class="modern-flight-top">
+
+                <div>
+
+                    <h2>{{ flight.airline_name }}</h2>
+
+                    <span class="flight-route">
+
+                        {{ flight.source }}
+                        →
+                        {{ flight.destination }}
+
+                    </span>
+
+                </div>
+
+                <div class="flight-price">
+
+                    ₹{{ flight.ticket_price }}
+
+                </div>
+
+            </div>
+
+
+            <!-- DETAILS -->
+
+            <div class="modern-flight-grid">
+
+                {% set details = [
+
+                    ('Departure',
+                    flight.departure_time),
+
+                    ('Arrival',
+                    flight.arrival_time),
+
+                    ('Duration',
+                    flight.duration),
+
+                    ('Stops',
+                    flight.stops)
+
+                ] %}
+
+
+                {% for label, value in details %}
+
+                <div class="modern-flight-info">
+
+                    <span>{{ label }}</span>
+
+                    <h3>{{ value }}</h3>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+
+            <!-- AI INSIGHTS -->
+
+            <div class="ai-insights-section">
+
+                <div class="ai-badge delay-badge">
+
+                    {{ flight.delay_prediction }}
+
+                </div>
+
+                <div class="ai-badge weather-badge">
+
+                    {{ flight.weather_status }}
+
+                </div>
+
+
+                {% if flight.ticket_price < 4000 %}
+
+                <div class="ai-badge budget-badge">
+
+                    Budget Flight
+
+                </div>
+
+                {% elif flight.ticket_price < 8000 %}
+
+                <div class="ai-badge standard-badge">
+
+                    Standard Pricing
+
+                </div>
+
+                {% else %}
+
+                <div class="ai-badge premium-badge">
+
+                    Premium Pricing
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <a href="/flight-details/{{ flight.flight_id }}"
+               class="modern-view-link">
+
+                <button class="modern-view-btn">
+
+                    View Full Details
+
+                </button>
+
+            </a>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+<!-- JS -->
+
+<script>
+
+    const sourceDropdown =
+        document.getElementById('source');
+
+    const destinationDropdown =
+        document.getElementById('destination');
+
+
+    sourceDropdown.addEventListener('change', () => {
+
+        let selectedSource =
+            sourceDropdown.value;
+
+        for(let option of destinationDropdown.options){
+
+            option.hidden =
+
+                option.value === selectedSource;
+
+        }
+
+    });
+
+</script>
+
+</body>
+
+</html>

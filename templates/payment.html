@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Payment Gateway</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for(
+          'static',
+          filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="payment-page">
+
+    <div class="payment-card">
+
+
+        <!-- HEADER -->
+
+        <h1>Secure Payment</h1>
+
+        <div class="payment-lock">
+
+            🔒 256-bit Secure Payment Gateway
+
+        </div>
+
+        <p>
+
+            Complete your payment securely
+
+        </p>
+
+
+        <!-- FLIGHT INFO -->
+
+        <div class="payment-flight-info">
+
+            <h2>{{ flight.airline_name }}</h2>
+
+            <span>
+
+                {{ flight.source }}
+                →
+                {{ flight.destination }}
+
+            </span>
+
+        </div>
+
+
+        <!-- PRICE -->
+
+        <div class="payment-price-box">
+
+            Rs. {{ final_ticket_price }}
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST">
+
+
+            <!-- PAYMENT METHOD -->
+
+            <div class="payment-input">
+
+                <label>Payment Method</label>
+
+                <select name="payment_method"
+                        id="payment_method"
+                        required>
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    {% for method in [
+
+                        'Credit Card',
+                        'Debit Card',
+                        'UPI',
+                        'Net Banking',
+                        'Wallet'
+
+                    ] %}
+
+                    <option value="{{ method }}">
+
+                        {{ method }}
+
+                    </option>
+
+                    {% endfor %}
+
+                </select>
+
+            </div>
+
+
+            <!-- CARD HOLDER -->
+
+            <div class="payment-input">
+
+                <label>Card Holder Name</label>
+
+                <input type="text"
+                       name="card_holder_name"
+                       required>
+
+            </div>
+
+
+            <!-- CARD DETAILS -->
+
+            <div id="card-fields">
+
+
+                {% set card_fields = [
+
+                    ('Card Number',
+                    'text',
+                    'card_number',
+                    '',
+                    '16'),
+
+                    ('Expiry',
+                    'text',
+                    'expiry',
+                    'MM/YY',
+                    ''),
+
+                    ('CVV',
+                    'password',
+                    'cvv',
+                    '',
+                    '3')
+
+                ] %}
+
+
+                <div class="payment-input">
+
+                    <label>Card Number</label>
+
+                    <input type="text"
+                           name="card_number"
+                           maxlength="16">
+
+                </div>
+
+
+                <div class="payment-row">
+
+                    {% for label, type, name,
+                    placeholder, maxlength
+                    in card_fields[1:] %}
+
+                    <div class="payment-input">
+
+                        <label>{{ label }}</label>
+
+                        <input type="{{ type }}"
+                               name="{{ name }}"
+                               placeholder="{{ placeholder }}"
+                               {% if maxlength %}
+                               maxlength="{{ maxlength }}"
+                               {% endif %}>
+
+                    </div>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+
+            <!-- UPI FIELD -->
+
+            <div id="upi-field"
+                 style="display:none;">
+
+                <div class="payment-input">
+
+                    <label>UPI Address</label>
+
+                    <input type="text"
+                           name="upi_id"
+                           placeholder="example@upi">
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="payment-btn">
+
+                Pay Now
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- SCRIPT -->
+
+<script>
+
+    const paymentMethod =
+        document.getElementById(
+            'payment_method'
+        );
+
+    const cardFields =
+        document.getElementById(
+            'card-fields'
+        );
+
+    const upiField =
+        document.getElementById(
+            'upi-field'
+        );
+
+
+    paymentMethod.addEventListener(
+
+        'change',
+
+        function(){
+
+            const isUPI =
+                this.value === 'UPI';
+
+            cardFields.style.display =
+                isUPI ? 'none' : 'block';
+
+            upiField.style.display =
+                isUPI ? 'block' : 'none';
+
+        }
+
+    );
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Flight Booking</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="booking-confirm-page">
+
+    <div class="booking-confirm-card">
+
+
+        <!-- HEADER -->
+
+        <div class="booking-confirm-header">
+
+            <h1>Flight Booking</h1>
+
+            <p>
+                Confirm your seat and
+                complete your booking process.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form method="POST"
+              class="booking-confirm-form">
+
+            <div class="seat-input-box">
+
+                <label>Seat Number</label>
+
+                <input type="text"
+                       name="seat_number"
+                       placeholder="Enter Seat Number (Example: A1)"
+                       required>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button type="submit"
+                    class="booking-confirm-btn">
+
+                Confirm Booking
+
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

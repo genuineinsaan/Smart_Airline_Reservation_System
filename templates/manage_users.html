@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Users</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for(
+          'static',
+          filename='css/style.css'
+          ) }}">
+
+</head>
+
+<body>
+
+<div class="users-page">
+
+
+    <!-- HEADER -->
+
+    <div class="users-header">
+
+        <h1>Manage Users</h1>
+
+        <p>
+            View all registered users
+            in the airline reservation system.
+        </p>
+
+    </div>
+
+
+    <!-- TABLE -->
+
+    <div class="users-table-box">
+
+        <table class="users-table">
+
+
+            <thead>
+
+                <tr>
+
+                    {% for heading in [
+
+                        'User ID',
+                        'Name',
+                        'Email',
+                        'Phone',
+                        'Gender',
+                        'Country'
+
+                    ] %}
+
+                    <th>{{ heading }}</th>
+
+                    {% endfor %}
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                {% for user in users %}
+
+                <tr>
+
+                    {% set user_data = [
+
+                        user.unique_user_id,
+                        user.full_name,
+                        user.email,
+                        user.phone,
+                        user.gender,
+                        user.country
+
+                    ] %}
+
+
+                    {% for data in user_data %}
+
+                    <td>{{ data }}</td>
+
+                    {% endfor %}
+
+                </tr>
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
